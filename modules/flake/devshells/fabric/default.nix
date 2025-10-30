@@ -12,6 +12,7 @@ in
     environment.systemPackages = with pkgs; [
       python3
       python3Packages.pygobject3
+      python3Packages.fabric
       gtk3
       cairo
     ];
