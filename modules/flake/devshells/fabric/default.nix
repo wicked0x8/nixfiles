@@ -11,7 +11,7 @@ in
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
       python3
-      python3Packages.pygobject
+      python3Packages.pygobject3
       gtk3
       cairo
     ];
