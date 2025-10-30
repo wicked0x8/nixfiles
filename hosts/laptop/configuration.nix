@@ -6,7 +6,6 @@ in
 {
   imports = [
     ./hardware-configuration.nix
-    ../../modules/flake/import.nix
     ../../modules/nixos/import.nix
     ../../modules/home/import.nix
     ../../modules/shared/import.nix
@@ -47,10 +46,6 @@ in
       tools = {
         fastfetch = enabled;
         nixvim = enabled;
-      };
-
-      devshells = {
-        fabric = enabled;
       };
 
       system = {
