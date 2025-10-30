@@ -19,7 +19,7 @@ in
     # Optional: shell hook to notify devshell usage
     environment.shellInit = ''
       echo "fabric devshell enabled"
-      export PYTHONPATH=${pkgs.python3Packages.pygobject}/lib/python3.*/site-packages
+      export PYTHONPATH=${pkgs.python3Packages.pygobject3}/lib/python3.*/site-packages
     '';
   };
 }
