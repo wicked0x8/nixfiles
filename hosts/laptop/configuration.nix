@@ -6,6 +6,7 @@ in
 {
   imports = [
     ./hardware-configuration.nix
+    ../../modules/flake/import.nix
     ../../modules/nixos/import.nix
     ../../modules/home/import.nix
     ../../modules/shared/import.nix
@@ -40,16 +41,16 @@ in
 	  enable = true;
 	  home = true;
 	};
-	quickshell = {
-	  enable = true;
-	  config = "cool-config";
-	};
 	ly = enabled;
       };
 
       tools = {
         fastfetch = enabled;
         nixvim = enabled;
+      };
+
+      devshells = {
+        fabric = enabled;
       };
 
       system = {
