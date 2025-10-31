@@ -14,9 +14,14 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    mango = {
+      url = "github:DreamMaoMao/mango";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixvim, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, nixvim, home-manager, mango,  ... }@inputs:
   let
     lib = nixpkgs.lib.extend (self: super: {
       whatever = import ./lib {
@@ -30,6 +35,7 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/laptop/configuration.nix
+	  mango.nixosModules.mango
         ];
         specialArgs = {
           inherit inputs lib;
