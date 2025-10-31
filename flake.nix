@@ -16,7 +16,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixvim, home-manager, mango,  ... }@inputs:
+  outputs = { self, nixpkgs, nixvim, home-manager, ... }@inputs:
   let
     lib = nixpkgs.lib.extend (self: super: {
       whatever = import ./lib {
