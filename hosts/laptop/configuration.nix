@@ -40,6 +40,7 @@ in
 	  enable = true;
 	  home = true;
 	};
+	mango = enabled;
 	ly = enabled;
       };
 
