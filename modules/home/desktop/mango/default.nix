@@ -3,6 +3,8 @@
 let
   inherit (lib) mkEnableOption mkIf;
   mangoconfDir = "${config.home.homeDirectory}/confix/home/config/mango/config";
+  userHome = config.home.homeDirectory;
+  mangoLink = "${userHome}/.config/mango";
   cfg = config.mine.desktop.mango;
 in
 {
@@ -11,12 +13,16 @@ in
   };
 
   config = mkIf cfg.enable {
-    home.file.".config/mango" = {
-      source = lib.file.mkOutOfStoreSymlink mangoconfDir;
-    };
+    home.activation.symlinkMango = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+      mkdir -p ${userHome}/.config
+      rm -rf ${mangoLink}
+      ln -sfn ${mangoconfDir} ${mangoLink}
+    '';
 
-    home.file.".config/mango/config.conf" = {
-      source = "${mangoconfDir}/config.conf";
+    # Optionally you can still include a .keep file or other managed files:
+    home.file.".config/.keep" = {
+      text = "";
     };
   };
 }
+
