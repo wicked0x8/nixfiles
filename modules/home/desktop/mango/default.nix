@@ -6,15 +6,10 @@ let
   mangoModule = inputs.mango.nixosModules.mango;
 in
 {
-  # Import mango Home Manager module for mango-specific HM options
-  # import inputs.home-manager.nixosModules.home-manager ];
-
-  # Declare your custom option
   options.mine.desktop.mango = {
     home = mkEnableOption "Enable mango wayland compositor";
   };
 
-  # Conditional config to enable mango session and wayland window manager
   config = mkIf cfg.home {
     home-manager.users.${user.name} = {
       home.sessionVariables = {
@@ -22,10 +17,8 @@ in
         XDG_SESSION_TYPE = "wayland";
       };
 
-      # Enable mango wm in the user environment
       wayland.windowManager.mango = {
         enable = true;
-        package = inputs.mango;
 
         settings = ''
           # Put mango config here
@@ -35,6 +28,12 @@ in
           # Put autostart commands here (without shebang)
         '';
       };
+
+      # Add mango Home Manager module here
+      imports = [
+        inputs.mango.hmModules.mango
+      ];
     };
   };
 }
+
