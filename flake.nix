@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     nix-colors.url = "github:misterio77/nix-colors";
+    mango.url = "github:dreammaomao/mango";
 
     nixvim = {
       url = "github:nix-community/nixvim";

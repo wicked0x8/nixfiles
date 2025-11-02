@@ -41,6 +41,10 @@ in
 	  enable = true;
 	  home = true;
 	};
+	mango = {
+	  enable = true;
+	  home = true;
+	};
 	ly = enabled;
       };
 
