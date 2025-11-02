@@ -3,10 +3,11 @@ let
   inherit (lib) mkEnableOption mkIf;
   inherit (config.mine) user;
   cfg = config.mine.desktop.mango;
+  mangoModule = inputs.mango.nixosModules.mango;
 in
 {
   # Import mango Home Manager module for mango-specific HM options
-  imports = [ inputs.mango.hmModules.mango inputs.home-manager.nixosModules.home-manager ];
+  imports = [ mangoModule ];
 
   # Declare your custom option
   options.mine.desktop.mango = {
