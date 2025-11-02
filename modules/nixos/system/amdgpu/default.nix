@@ -1,7 +1,7 @@
 { lib, config, pkgs, ... }:
 let
   inherit (lib) mkEnableOption mkIf;
-  cfg = config.mine.amdgpu;
+  cfg = config.mine.system.amdgpu;
 in
 {
   options.mine.system.amdgpu = {
