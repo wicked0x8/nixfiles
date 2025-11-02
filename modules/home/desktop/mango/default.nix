@@ -25,7 +25,7 @@ in
       # Enable mango wm in the user environment
       wayland.windowManager.mango = {
         enable = true;
-        package = pkgs.mango;
+        package = pkgs.mangowc;
 
         settings = ''
           # Put mango config here
