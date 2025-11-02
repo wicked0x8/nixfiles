@@ -33,7 +33,7 @@
       	  inherit inputs;
       	  inherit lib;
         };
-        modules = [ ./hosts/laptop/configuration.nix inputs.home-manager.nixosModules.home-manager ];
+        modules = [ ./hosts/laptop/configuration.nix ];
       };
     };
   };

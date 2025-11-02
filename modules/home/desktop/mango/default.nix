@@ -6,7 +6,7 @@ let
 in
 {
   # Import mango Home Manager module for mango-specific HM options
-  imports = [ inputs.mango.hmModules.mango ];
+  imports = [ inputs.mango.hmModules.mango inputs.home-manager.nixosModules.home-manager ];
 
   # Declare your custom option
   options.mine.desktop.mango = {
