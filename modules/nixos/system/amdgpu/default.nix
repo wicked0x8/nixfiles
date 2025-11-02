@@ -19,7 +19,6 @@ in
         mesa
         libva
         vulkan-tools
-        amdvlk
       ];
     };
 
