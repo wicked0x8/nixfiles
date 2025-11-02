@@ -32,7 +32,7 @@
       flake = {
         nixosConfigurations = {
           laptop = nixpkgs.lib.nixosSystem {
-            system = stdenv.hostPlatform.system;
+            system = "x86_64-linux";
             specialArgs = {
               inherit inputs;
               inherit lib;
