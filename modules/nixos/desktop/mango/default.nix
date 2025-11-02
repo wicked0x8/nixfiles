@@ -12,8 +12,6 @@ let
 
 in
 {
-  imports = [ inputs.mango.nixosModules.mango ];
-
   options.mine.desktop.mango = {
     enable = mkEnableOption "enable mango wayland compositor";
   };
