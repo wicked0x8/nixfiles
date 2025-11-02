@@ -1,41 +1,19 @@
 {
-  description = "my homemade nixos setup";
+  description = "My homemade NixOS flake with modular hierarchy";
 
-  inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
-    nix-colors.url = "github:misterio77/nix-colors";
+  inputs = import ./modules/flake/inputs.nix;
 
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+  outputs = inputs@{ flake-parts, ... }:
+    flake-parts.lib.mkFlake { inherit inputs; } (parts: {
+      imports = [ ./hosts/nixosConfigurations.nix ];
 
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-  };
+      systems = [ "x86_64-linux" ];
 
-  outputs = { self, nixpkgs, nixvim, home-manager, ... }@inputs:
-  let
-    lib = nixpkgs.lib.extend (self: super: {
-      whatever = import ./lib {
-        inherit inputs;
-        lib = self;
-      };
-    });
-  in {
-    nixosConfigurations = {
-      nixos-btw = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./hosts/laptop/configuration.nix
-        ];
-        specialArgs = {
-          inherit inputs lib;
+      perSystem = {
+        x86_64-linux = { pkgs, lib, ... }: {
+          nixosConfigurations = parts.imports;
         };
       };
-    };
-  };
+    });
 }
 
