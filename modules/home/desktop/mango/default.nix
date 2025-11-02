@@ -162,8 +162,7 @@ in
           bind=SUPER,r,reload_config
 
           # menu and terminal
-          bind=Alt,space,spawn,rofi -show drun
-          bind=Alt,Return,spawn,foot
+          bind=Alt,T,spawn,alacritty
 
           # exit
           bind=SUPER,m,quit
