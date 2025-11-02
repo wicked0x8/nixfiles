@@ -2,9 +2,10 @@
   description = "my homemade nixos setup";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nix-colors.url = "github:misterio77/nix-colors";
-    mango.url = "github:dreammaomao/mango";
+    mango.url = "github:DreamMaoMao/mango";
+    flake-parts.url = "github:hercules-ci/flake-parts";
 
     nixvim = {
       url = "github:nix-community/nixvim";
@@ -17,7 +18,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixvim, home-manager, ... }@inputs:
+  outputs = inputs@{ self, nixpkgs, home-manager, mango, flake-parts, ... }:
   let
     lib = nixpkgs.lib.extend (self: super: {
       whatever = import ./lib {
@@ -25,16 +26,24 @@
         lib = self;
       };
     });
-  in {
-    nixosConfigurations = {
-      laptop = nixpkgs.lib.nixosSystem {
-    	system = "x86_64-linux";
-    	specialArgs = {
-      	  inherit inputs;
-      	  inherit lib;
+  in
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = [ "x86_64-linux" ];
+      flake = {
+        nixosConfigurations = {
+          laptop = nixpkgs.lib.nixosSystem {
+            system = "x86_64-linux";
+            specialArgs = {
+              inherit inputs;
+              inherit lib;
+            };
+            modules = [
+              ./hosts/laptop/configuration.nix
+              mango.nixosModules.mango 
+            ];
+          };
         };
-        modules = [ ./hosts/laptop/configuration.nix inputs.mango.nixosModules.mango inputs.home-manager.nixosModules.home-manager ];
       };
     };
-  };
 }
+
