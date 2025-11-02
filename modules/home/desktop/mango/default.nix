@@ -7,7 +7,7 @@ let
 in
 {
   options.mine.desktop.mango = {
-    home = mkEnableOption "Enable mango wayland compositor";
+    home = mkEnableOption "nable mango wayland compositor";
   };
 
   config = mkIf cfg.home {
@@ -19,7 +19,7 @@ in
           # More option see [https://github.com/DreamMaoMao/mango/wiki/](https://github.com/DreamMaoMao/mango/wiki/)
 
           # Window effect
-          blur=0
+          blur=1
           blur_layer=0
           blur_optimized=1
           blur_params_num_passes = 2
@@ -29,7 +29,7 @@ in
           blur_params_contrast = 0.9
           blur_params_saturation = 1.2
 
-          shadows = 0
+          shadows = 1
           layer_shadows = 0
           shadow_only_floating = 1
           shadows_size = 10
@@ -38,7 +38,7 @@ in
           shadows_position_y = 0
           shadowscolor= 0x000000ff
 
-          border_radius=6
+          border_radius=12
           no_radius_when_single=0
           focused_opacity=1.0
           unfocused_opacity=1.0
@@ -80,7 +80,7 @@ in
           new_is_master=1
           default_mfact=0.55
           default_nmaster=1
-          smartgaps=0
+          smartgaps=1
 
           # Overview Setting
           hotarea_size=10
@@ -132,7 +132,7 @@ in
           gappov=10
           scratchpad_width_ratio=0.8
           scratchpad_height_ratio=0.9
-          borderpx=4
+          borderpx=8
           rootcolor=0x201b14ff
           bordercolor=0x444444ff
           focuscolor=0xc9b890ff
@@ -163,6 +163,7 @@ in
 
           # menu and terminal
           bind=Alt,T,spawn,alacritty
+	  bind=Alt,B,spawn,firefox
 
           # exit
           bind=SUPER,m,quit
