@@ -1,14 +1,23 @@
 { lib, config, pkgs, ... }:
 let
   inherit (lib) mkEnableOption mkIf;
-  cfg = config.mine.apps.firefox;
+  inherit (config.mine) user;
+  cfg = config.mine.services.seatd;
 in
 {
-  options.mine.apps.firefox = {
-    enable = mkEnableOption "install firefox";
+  options.mine.services.seatd = {
+    enable = mkEnableOption "enable seatd service";
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ firefox ];
+    environment.systemPackages = with pkgs; [ seatd ];
+
+    # Enable the seatd service in systemd
+    services.seatd = {
+      enable = true;
+      group = "seat";
+      user = "${user.name}";
+    };
   };
 }
+

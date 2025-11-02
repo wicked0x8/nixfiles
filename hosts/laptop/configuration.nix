@@ -53,6 +53,10 @@ in
         nixvim = enabled;
       };
 
+      services = {
+        seatd = enabled;
+      };
+
       system = {
         boot.grub = enabled;
 
