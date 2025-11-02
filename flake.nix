@@ -33,7 +33,7 @@
       	  inherit inputs;
       	  inherit lib;
         };
-        modules = [ ./hosts/laptop/configuration.nix ];
+        modules = [ ./hosts/laptop/configuration.nix inputs.mango.nixosModules.mango ];
       };
     };
   };
