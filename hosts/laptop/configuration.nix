@@ -49,7 +49,10 @@ in
       };
 
       system = {
-        boot.grub = enabled;
+        boot = {
+	  grub = enabled;
+	  linux-kernel = "zen";
+	};
 
         networking = {
           networkmanager = {
