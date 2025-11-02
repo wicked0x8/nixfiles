@@ -13,6 +13,7 @@ in
 
   config = {
     system.stateVersion = "25.05";
+    boot.kernelPackages = pkgs.linuxPackages_zen; # todo, refactor this somewhere idk..
 
     mine = {
       user = {
@@ -49,15 +50,12 @@ in
       };
 
       system = {
-        boot = {
-	  grub = enabled;
-	  linux-kernel = "zen";
-	};
+        boot.grub = enabled;
 
         networking = {
           networkmanager = {
             enable = true;
-            hostname = "nixos-btw";
+            hostname = "laptop";
           };
         };
 	fonts = enabled;

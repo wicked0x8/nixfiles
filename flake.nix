@@ -26,14 +26,13 @@
     });
   in {
     nixosConfigurations = {
-      nixos-btw = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./hosts/laptop/configuration.nix
-        ];
-        specialArgs = {
-          inherit inputs lib;
+      laptop = nixpkgs.lib.nixosSystem {
+    	system = "x86_64-linux";
+    	specialArgs = {
+      	  inherit inputs;
+      	  inherit lib;
         };
+        modules = [ ./hosts/laptop/configuration.nix ];
       };
     };
   };
