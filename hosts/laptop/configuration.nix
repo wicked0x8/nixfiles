@@ -43,7 +43,7 @@ in
 	};
 	mango = {
 	  enable = true;
-	  home = true;
+	  #home = true;
 	};
 	ly = enabled;
       };
