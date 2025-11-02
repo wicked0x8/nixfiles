@@ -24,10 +24,9 @@ in
       ];
     };
 
-    # AMD GPU options: OpenCL and Vulkan drivers
+    # AMD GPU options: OpenCL drivers
     hardware.amdgpu = {
       opencl.enable = true;
-      amdvlk.enable = true;
     };
   };
 }
