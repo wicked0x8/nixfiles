@@ -11,7 +11,6 @@ in
   };
 
   config = mkIf cfg.enable {
-    boot.loader.efi.canTouchEfiVariables = true;
     boot.loader.grub = {
       enable = true;
       useOSProber = false;
