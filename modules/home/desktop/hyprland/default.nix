@@ -16,12 +16,6 @@ in
 
   config = mkIf cfg.home {
     home-manager.users.${user.name} = {
-      home.sessionVariables = {
-        XDG_CURRENT_SESSION = "hyprland";
-        XDG_SESSION_TYPE = "wayland";
-        QT_QPA_PLATFORM = "wayland-egl";
-      };
-
       wayland.windowManager.hyprland = {
         enable = true;
         package = pkgs.hyprland;

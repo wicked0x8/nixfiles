@@ -12,11 +12,6 @@ in
 
   config = mkIf cfg.home {
     home-manager.users.${user.name} = {
-      home.sessionVariables = {
-        XDG_CURRENT_SESSION = "mango";
-        XDG_SESSION_TYPE = "wayland";
-      };
-
       wayland.windowManager.mango = {
         enable = true;
 
