@@ -66,6 +66,7 @@ in
             hostname = "laptop";
           };
         };
+	amdgpu = enabled;
 	fonts = enabled;
         nix.flakes = enabled;
       };
