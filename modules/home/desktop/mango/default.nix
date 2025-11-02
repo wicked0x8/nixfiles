@@ -19,7 +19,7 @@ in
           # More option see [https://github.com/DreamMaoMao/mango/wiki/](https://github.com/DreamMaoMao/mango/wiki/)
 
           # Window effect
-          blur=1
+          blur=0
           blur_layer=0
           blur_optimized=1
           blur_params_num_passes = 2
@@ -132,7 +132,7 @@ in
           gappov=10
           scratchpad_width_ratio=0.8
           scratchpad_height_ratio=0.9
-          borderpx=8
+          borderpx=6
           rootcolor=0x201b14ff
           bordercolor=0x444444ff
           focuscolor=0xc9b890ff
