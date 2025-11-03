@@ -7,6 +7,9 @@ let
 
 in
 {
+
+  imports = [ inputs.dankMaterialShell.homeModules.dankMaterialShell.default ];
+  
   options.mine.desktop.dms = {
     enable = mkEnableOption "enable dms";
   };
