@@ -9,7 +9,7 @@ in
   imports = [ inputs.dankMaterialShell.homeModules.dankMaterialShell.default ];
 
   options.mine.desktop.dms = {
-    enable = mkOpt types.bool false "enable alacritty";
+    enable = mkOpt types.bool false "enable dms";
   };
 
   config = mkIf cfg.enable {
