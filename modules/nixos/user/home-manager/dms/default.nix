@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    inputs.home-manager.nixosModules.home-manager
     inputs.dankMaterialShell.homeModules.dankMaterialShell.default
   ];
 
