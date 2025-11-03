@@ -8,6 +8,9 @@ in {
   };
 
   config = lib.mkIf cfg.enable {
-    programs.dankMaterialShell.enable = true;
+    programs.dankMaterialShell = {
+      enable = true;
+      quickshell.package = pkgs.quickshell;
+    };
   };
 }
