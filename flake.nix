@@ -39,7 +39,7 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, mango, flake-parts, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, mango, flake-parts, dankMaterialShell, ... }:
   let
     lib = nixpkgs.lib.extend (self: super: {
       whatever = import ./lib {
@@ -60,7 +60,7 @@
             };
             modules = [
               ./hosts/laptop/configuration.nix
-              mango.nixosModules.mango 
+              mango.nixosModules.mango
             ];
           };
         };

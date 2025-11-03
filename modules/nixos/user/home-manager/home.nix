@@ -3,6 +3,7 @@
 {
   config = {
     programs.home-manager.enable = true;
+    programs.dankMaterialShell.enable = true;
 
     home = {
       username = "${user.name}";
