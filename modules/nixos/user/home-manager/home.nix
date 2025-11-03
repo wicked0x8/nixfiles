@@ -3,8 +3,7 @@
 {
   config = {
     programs.home-manager.enable = true;
-
-    imports = [ inputs.dankMaterialShell.homeModules.dankMaterialShell.default ]
+    programs.dankMaterialShell.enable = true;
 
     home = {
       username = "${user.name}";
