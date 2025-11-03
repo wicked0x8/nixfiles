@@ -62,19 +62,11 @@
             };
             modules = [
               ./hosts/laptop/configuration.nix
+	      home-manager.nixosModules.home-manager
               mango.nixosModules.mango
             ];
           };
         };
-	homeConfigurations = {
-	  dubbber = home-manager.lib.homeManagerConfiguration {
-	    pkgs = import nixpkgs { inherit system; };
-	    modules = [
-	      dankMaterialShell.homeModules.dankMaterialShell.default
-              { programs.dankMaterialShell.enable = true; }
-	    ];
-	  };
-	};
       };
     };
 }

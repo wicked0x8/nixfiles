@@ -3,6 +3,8 @@
   config = {
     programs.home-manager.enable = true;
 
+    imports = [ ./dms/default.nix ];
+
     home = {
       username = "${user.name}";
       stateVersion = "25.05";
