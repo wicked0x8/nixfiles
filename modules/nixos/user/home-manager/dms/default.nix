@@ -1,19 +1,18 @@
-{ inputs, lib, config, ...}:
+{ inputs, lib, config, ... }:
 let
   inherit (lib) mkEnableOption mkIf;
-  inherit (config.mine) user;
+  user = config.mine.user;  # assume this is set in your config
+  cfg = config.mine.desktop.dms;
 in
 {
-  options.mine.desktop.dms = {
-    enable = mkEnableOption "enable dms";
-  };
+  options.mine.desktop.dms.enable = mkEnableOption "Enable dms";
 
-  home-manager.users.${user.name} = let
-    dmsCfg = config.mine.desktop.dms;
-  in mkIf dmsCfg.enable {
-    imports = [ inputs.dankMaterialShell.homeModules.dankMaterialShell.default ];
-
-    programs.dankMaterialShell.enable = true;
+  config = mkIf cfg.enable {
+    # Make sure Home Manager module is imported in your top-level NixOS config
+    home-manager.users.${user.name} = {
+      imports = [ inputs.dankMaterialShell.homeModules.dankMaterialShell.default ];
+      programs.dankMaterialShell.enable = true;
+    };
   };
 }
 
