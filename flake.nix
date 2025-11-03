@@ -47,6 +47,7 @@
         lib = self;
       };
     });
+    system = "x86_64";
     pkgs = import nixpkgs { inherit system; };
   in
     flake-parts.lib.mkFlake { inherit inputs; } {
