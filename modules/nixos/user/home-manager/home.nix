@@ -3,8 +3,6 @@
   config = {
     programs.home-manager.enable = true;
 
-    imports = [ inputs.dankMaterialShell.homeModules.dankMaterialShell ]; 
-
     home = {
       username = "${user.name}";
       stateVersion = "25.05";
