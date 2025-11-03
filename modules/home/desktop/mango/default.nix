@@ -136,7 +136,7 @@ in
           rootcolor=0x201b14ff
           bordercolor=0x${config.colorScheme.palette.base01}
           focuscolor=0x${config.colorScheme.palette.base00}
-          maximizescreencolor=0x89aa61ff
+          maximizescreencolor=0x${config.colorScheme.palette.base03}
           urgentcolor=0xad401fff
           scratchpadcolor=0x516c93ff
           globalcolor=0x${config.colorScheme.palette.base05}
