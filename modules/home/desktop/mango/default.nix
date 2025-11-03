@@ -6,6 +6,9 @@ let
   mangoModule = inputs.mango.nixosModules.mango;
 in
 {
+  
+  imports = [ mangoModule ];
+
   options.mine.desktop.mango = {
     home = mkEnableOption "enable mango wayland compositor hm config";
   };
