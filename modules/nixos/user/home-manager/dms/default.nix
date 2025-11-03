@@ -1,17 +1,13 @@
-{ inputs, lib, config, pkgs, ... }:
-let
-  inherit (lib) mkEnableOption mkIf;
-  cfg = config.mine.desktop.dms;
-in
-{
-  imports = [ inputs.dankMaterialShell.homeModules.dankMaterialShell.default ];
+{ config, pkgs, lib, ... }:
 
+let
+  cfg = config.mine.desktop.dms or {};
+in {
   options.mine.desktop.dms = {
-    enable = mkEnableOption "install dms";
+    enable = lib.mkEnableOption "install dms";
   };
 
-  config = mkIf cfg.enable {
+  config = lib.mkIf cfg.enable {
     programs.dankMaterialShell.enable = true;
   };
 }
-

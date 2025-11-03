@@ -4,8 +4,6 @@
   config = {
     programs.home-manager.enable = true;
 
-    imports = [ ./dms/default.nix ]; #todo, refactor this too into import.nix
-
     home = {
       username = "${user.name}";
       stateVersion = "25.05";
@@ -26,5 +24,7 @@
       templates = "templates";
       videos = "vids";
     };
+
+    imports = [ ./dms/default.nix ]; #todo, refactor this too into import.nix
   };
 }
