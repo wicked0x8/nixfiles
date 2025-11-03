@@ -137,12 +137,12 @@ in
           scratchpad_height_ratio=0.9
           borderpx=2
           rootcolor=0x201b14ff
-          bordercolor=0x${config.colorScheme.palette.base01}
-          focuscolor=0x${config.colorScheme.palette.base00}
-          maximizescreencolor=0x${config.colorScheme.palette.base03}
+          bordercolor=0x444444ff
+          focuscolor=0xc9b890ff
+          maximizescreencolor=0x89aa61ff
           urgentcolor=0xad401fff
           scratchpadcolor=0x516c93ff
-          globalcolor=0x${config.colorScheme.palette.base05}
+          globalcolor=0xb153a7ff
           overlaycolor=0x14a57cff
 
           # layout support:
