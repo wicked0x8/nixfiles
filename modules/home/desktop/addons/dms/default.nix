@@ -1,4 +1,4 @@
-{ inputs, lib, config, ... }:
+{ lib, config, ... }:
 let
   inherit (lib) mkIf types;
   inherit (lib.whatever) mkOpt;
@@ -9,14 +9,11 @@ in
   imports = [ inputs.dankMaterialShell.homeModules.dankMaterialShell.default ];
 
   options.mine.desktop.dms = {
-    enable = mkOpt types.bool false "enable dms";
+    enable = mkOpt types.bool false "enable alacritty";
   };
 
   config = mkIf cfg.enable {
-    home-manager.users.${user.name} = {
-      programs.quickshell.enable = true;
-      programs.quickshell.shell = "dankMaterialShell";
-    };
+    programs.dankMaterialShell.enable = true;
   };
 }
 
