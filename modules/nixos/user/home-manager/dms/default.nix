@@ -1,3 +1,7 @@
+let
+  inherit (lib) mkEnableOption mkIf;
+  inherit (config.mine) user;
+in
 {
   home-manager.users.${user.name} = let
     dmsCfg = config.mine.desktop.dms;
