@@ -1,15 +1,6 @@
-{ config, pkgs, user, inputs, lib, ... }:
-let
-  inherit (lib) mkEnableOption mkIf types;
-  inherit (config.mine) user;
-in
+{ config, pkgs, user, ... }:
 {
   config = {
-    imports = [
-      inputs.dankMaterialShell.homeModules.dankMaterialShell.default
-      ./dms/default.nix
-    ];
-
     programs.home-manager.enable = true;
 
     home = {
