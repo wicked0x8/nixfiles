@@ -132,14 +132,14 @@ in
           gappov=10
           scratchpad_width_ratio=0.8
           scratchpad_height_ratio=0.9
-          borderpx=6
+          borderpx=2
           rootcolor=0x201b14ff
           bordercolor=0x${config.colorScheme.palette.base01}
           focuscolor=0x${config.colorScheme.palette.base00}
           maximizescreencolor=0x89aa61ff
           urgentcolor=0xad401fff
           scratchpadcolor=0x516c93ff
-          globalcolor=0xb153a7ff
+          globalcolor=0x${config.colorScheme.palette.base05}
           overlaycolor=0x14a57cff
 
           # layout support:
