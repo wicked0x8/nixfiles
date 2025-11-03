@@ -21,7 +21,7 @@ in
         home-manager = enabled;
         shell.package = pkgs.zsh;
 
-	nix-colors = disabled;
+	#nix-colors = enabled;
       };
 
       home-manager = {
