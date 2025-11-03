@@ -55,7 +55,7 @@ in
 
       services = {
         seatd = enabled;
-	power-profiles = enabled;
+	tlp = enabled;
       };
 
       system = {
@@ -67,7 +67,7 @@ in
             hostname = "laptop";
           };
         };
-	amdgpu = enabled;
+	amdcpu-tweaks = enabled;
 	fonts = enabled;
         nix.flakes = enabled;
       };
