@@ -6,6 +6,7 @@ in
 {
   config = {
     imports = [
+      inputs.dankMaterialShell.homeModules.dankMaterialShell.default
       ./dms/default.nix
     ];
 
