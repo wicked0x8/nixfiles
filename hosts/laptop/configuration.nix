@@ -55,6 +55,7 @@ in
 
       services = {
         seatd = enabled;
+	power-profiles = enabled;
       };
 
       system = {
