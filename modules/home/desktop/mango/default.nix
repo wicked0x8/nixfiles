@@ -7,7 +7,7 @@ let
 in
 {
   options.mine.desktop.mango = {
-    home = mkEnableOption "nable mango wayland compositor";
+    home = mkEnableOption "enable mango wayland compositor hm config";
   };
 
   config = mkIf cfg.home {

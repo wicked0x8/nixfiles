@@ -20,14 +20,9 @@
       url = "github:DreamMaoMao/mango";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    astal = {
-      url = "github:aylur/astal";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, mango, flake-parts, astal, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, mango, flake-parts, ... }:
   let
     lib = nixpkgs.lib.extend (self: super: {
       whatever = import ./lib {
