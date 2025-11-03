@@ -14,7 +14,8 @@ in
 
   config = mkIf cfg.enable {
     home-manager.users.${user.name} = {
-      programs.dankMaterialShell.enable = true;
+      programs.quickshell.enable = true;
+      programs.quickshell.shell = "dankMaterialShell";
     };
   };
 }
