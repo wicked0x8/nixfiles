@@ -10,7 +10,6 @@ in
   config = mkIf cfg.enable {
     # Make sure Home Manager module is imported in your top-level NixOS config
     home-manager.users.${user.name} = {
-      imports = [ inputs.dankMaterialShell.homeModules.dankMaterialShell.default ];
       programs.dankMaterialShell.enable = true;
     };
   };
