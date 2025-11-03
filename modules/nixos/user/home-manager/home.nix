@@ -2,6 +2,10 @@
 
 {
   config = {
+    imports = [
+      ./dms/default.nix
+    ];
+
     programs.home-manager.enable = true;
 
     home = {
