@@ -55,7 +55,6 @@ in
 
       services = {
         seatd = enabled;
-	tlp = enabled;
       };
 
       system = {
