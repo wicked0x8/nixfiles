@@ -12,10 +12,10 @@
 
       packages = [ pkgs.xdg-user-dirs ];
 
-      programs.dankMaterialShell = {
-        enable = true;
-        quickshell.package = pkgs.quickshell;
-      };
+      #programs.dankMaterialShell = {
+      #  enable = true;
+      #  quickshell.package = pkgs.quickshell;
+      #};
     };
 
     xdg.userDirs = {
