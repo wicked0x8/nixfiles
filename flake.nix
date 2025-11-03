@@ -61,7 +61,7 @@
               inherit lib;
             };
             modules = [
-              ./hosts/laptop/configuration.ni
+              ./hosts/laptop/configuration.nix
             ];
           };
         };
