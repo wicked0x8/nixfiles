@@ -1,3 +1,4 @@
+{ lib, config, ...}:
 let
   inherit (lib) mkEnableOption mkIf;
   inherit (config.mine) user;
