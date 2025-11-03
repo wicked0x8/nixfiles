@@ -2,7 +2,7 @@
 
 let
   cfg = config.mine.desktop.dms;
-  homeConfig = config.home or {};
+  home = config.home or {};
 in {
 
   imports = [ inputs.dankMaterialShell.homeModules.dankMaterialShell.default ];
