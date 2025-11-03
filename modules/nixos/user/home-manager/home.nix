@@ -3,23 +3,19 @@
   config = {
     programs.home-manager.enable = true;
 
-    #imports = [ ./dms/default.nix ]; 
+    imports = [ inputs.dankMaterialShell.homeModules.dankMaterialShell ]; 
 
     home = {
       username = "${user.name}";
       stateVersion = "25.05";
       homeDirectory = "${user.home-dir}";
 
-      packages = [ pkgs.xdg-user-dirs ]; 
-    };
+      packages = [ pkgs.xdg-user-dirs ];
 
-     imports = [
-      inputs.dankMaterialShell.homeModules.dankMaterialShell.default
-    ];
-
-    programs.dankMaterialShell = {
-      enable = true;
-      quickshell.package = pkgs.quickshell;
+      programs.dankMaterialShell = {
+        enable = true;
+        quickshell.package = pkgs.quickshell;
+      };
     };
 
     xdg.userDirs = {
