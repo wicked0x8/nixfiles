@@ -10,12 +10,12 @@
       stateVersion = "25.05";
       homeDirectory = "${user.home-dir}";
 
-      packages = [ pkgs.xdg-user-dirs ];
+      packages = [ pkgs.xdg-user-dirs ]; 
+    };
 
-      programs.dankMaterialShell = {
+    programs.dankMaterialShell = {
         enable = true;
         quickshell.package = pkgs.quickshell;
-      };
     };
 
     xdg.userDirs = {
