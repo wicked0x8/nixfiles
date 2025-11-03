@@ -8,7 +8,7 @@ let
 in
 {
 
-  imports = [ inputs.dankMaterialShell.homeModules.dankMaterialShell.default ../../../nixos/user/home-manager/home.nix ];
+  imports = [ inputs.dankMaterialShell.homeModules.dankMaterialShell.default ../../../../nixos/user/home-manager/home.nix ];
   
   options.mine.desktop.dms = {
     enable = mkEnableOption "enable dms";
