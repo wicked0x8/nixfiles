@@ -13,7 +13,6 @@ in
   };
 
   config = mkIf cfg.enable {
-    programs.dankMaterialShell.enable = true;
   };
 }
 
