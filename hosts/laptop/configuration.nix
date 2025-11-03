@@ -21,9 +21,7 @@ in
         home-manager = enabled;
         shell.package = pkgs.zsh;
 
-	nix-colors = {
-	  enable = true;
-	};
+	nix-colors = disabled;
       };
 
       home-manager = {
@@ -37,10 +35,10 @@ in
       };
 
       desktop = {
-      	hyprland = {
-	  enable = true;
-	  home = true;
-	};
+      	#hyprland = {
+	#  enable = true;
+	#  home = true;
+	#};
 	mango = {
 	  enable = true;
 	  home = true;

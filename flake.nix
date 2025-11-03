@@ -39,7 +39,7 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, nix-colors, home-manager, mango, flake-parts, dgop, dms-cli, dankMaterialShell, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, mango, flake-parts, dgop, dms-cli, dankMaterialShell, ... }:
   let
     lib = nixpkgs.lib.extend (self: super: {
       whatever = import ./lib {
@@ -61,8 +61,7 @@
               inherit lib;
             };
             modules = [
-              ./hosts/laptop/configuration.nix
-	      #home-manager.nixosModules.home-manager
+              ./hosts/laptop/configuration.ni
             ];
           };
         };
