@@ -10,7 +10,7 @@ in
   };
 
   config = mkIf cfg.enable {
-    boot.kernelParams = [ "amd_pstate=guided" ];
+    boot.kernelParams = [ "amd_pstate=active" ];
     powerManagement.enable = true;
     powerManagement.cpuFreqGovernor = "schedutil";
   };
