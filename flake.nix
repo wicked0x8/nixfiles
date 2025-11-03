@@ -63,6 +63,7 @@
             modules = [
               ./hosts/laptop/configuration.nix
 	      home-manager.nixosModules.home-manager
+	      dankMaterialShell.homeModules.dankMaterialShell.default
               mango.nixosModules.mango
             ];
           };
