@@ -3,10 +3,10 @@ let
   inherit (lib) mkIf types;
   inherit (lib.whatever) mkOpt;
   inherit (config.mine) user;
-  cfg = config.mine.apps.alacritty;
+  cfg = config.mine.desktop.dms;
 in
 {
-  imports = [ inputs.dankMaterialShell.homeModules.dankMaterialShell ];
+  imports = [ inputs.dankMaterialShell.homeModules.dankMaterialShell.default ];
 
   options.mine.desktop.dms = {
     enable = mkOpt types.bool false "enable dms";
