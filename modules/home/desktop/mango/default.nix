@@ -134,8 +134,8 @@ in
           scratchpad_height_ratio=0.9
           borderpx=6
           rootcolor=0x201b14ff
-          bordercolor=0x444444ff
-          focuscolor=0xc9b890ff
+          bordercolor=0x${config.colorScheme.palette.base01}
+          focuscolor=0x${config.colorScheme.palette.base00}
           maximizescreencolor=0x89aa61ff
           urgentcolor=0xad401fff
           scratchpadcolor=0x516c93ff
