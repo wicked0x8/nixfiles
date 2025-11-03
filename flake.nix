@@ -68,6 +68,7 @@
 	  dubbber = home-manager.lib.homeManagerConfiguration {
 	    modules = [
 	      dankMaterialShell.homeModules.dankMaterialShell.default
+              { programs.dankMaterialShell.enable = true; }
 	    ];
 	  };
 	};
