@@ -63,7 +63,7 @@
             modules = [
               ./hosts/laptop/configuration.nix
 	      home-manager.nixosModules.home-manager
-              #mango.nixosModules.mango
+              mango.nixosModules.mango
             ];
           };
         };
