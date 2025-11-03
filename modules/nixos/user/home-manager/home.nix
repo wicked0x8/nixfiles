@@ -3,6 +3,8 @@
 {
   config = {
     programs.home-manager.enable = true;
+
+    imports = [ inputs.dankMaterialShell.homeModules.dankMaterialShell ];
     programs.dankMaterialShell.enable = true;
 
     home = {
@@ -25,7 +27,5 @@
       templates = "templates";
       videos = "vids";
     };
-
-    imports = [ inputs.dankMaterialShell.homeModules.dankMaterialShell ];
   };
 }
