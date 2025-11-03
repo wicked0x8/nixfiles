@@ -64,6 +64,14 @@
             ];
           };
         };
+	homeConfigurations = {
+	  ${user.name} = home-manager.lib.homeManagerConfiguration {
+	    inherit pkgs;
+	    modules = [
+	      dankMaterialShell.homeModules.dankMaterialShell.default
+	    ];
+	  };
+	};
       };
     };
 }
