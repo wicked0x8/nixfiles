@@ -1,4 +1,4 @@
-{ lib, config, pkgs, ... }:
+{ inputs, lib, config, pkgs, ... }:
 let
   inherit (lib) mkEnableOption mkIf;
   cfg = config.mine.desktop.dms;
