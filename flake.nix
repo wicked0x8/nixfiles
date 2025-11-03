@@ -47,6 +47,7 @@
         lib = self;
       };
     });
+    pkgs = import nixpkgs { inherit system; };
   in
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [ "x86_64-linux" ];
@@ -66,6 +67,7 @@
         };
 	homeConfigurations = {
 	  dubbber = home-manager.lib.homeManagerConfiguration {
+	    pkgs = import nixpkgs { inherit system; };
 	    modules = [
 	      dankMaterialShell.homeModules.dankMaterialShell.default
               { programs.dankMaterialShell.enable = true; }
