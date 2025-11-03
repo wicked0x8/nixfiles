@@ -1,5 +1,8 @@
 { config, pkgs, user, inputs, ... }:
-
+let
+  inherit (lib) mkEnableOption mkIf types;
+  inherit (config.mine) user;
+in
 {
   config = {
     imports = [
