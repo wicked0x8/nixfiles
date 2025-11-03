@@ -46,6 +46,7 @@ in
 	  home = true;
 	};
 	ly = enabled;
+	dms = enabled;
       };
 
       tools = {
