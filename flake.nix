@@ -66,7 +66,6 @@
         };
 	homeConfigurations = {
 	  dubbber = home-manager.lib.homeManagerConfiguration {
-	    inherit pkgs;
 	    modules = [
 	      dankMaterialShell.homeModules.dankMaterialShell.default
 	    ];
