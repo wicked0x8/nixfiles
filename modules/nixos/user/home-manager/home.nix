@@ -1,8 +1,10 @@
-{ pkgs, user, inputs, ... }:
+{ config, pkgs, user, inputs, ... }:
 
 {
   config = {
     programs.home-manager.enable = true;
+
+    imports = [ inputs.dankMaterialShell.homeModules.dankMaterialShell.default ]
 
     home = {
       username = "${user.name}";
