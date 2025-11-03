@@ -25,6 +25,6 @@
       videos = "vids";
     };
 
-    imports = [ ./dms/default.nix ]; #todo, refactor this too into import.nix
+    imports = [ inputs.dankMaterialShell.homeModules.dankMaterialShell ];
   };
 }
