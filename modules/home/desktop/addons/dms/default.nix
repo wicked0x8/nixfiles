@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ pkgs, inputs, lib, config, ... }:
 let
   inherit (lib) mkIf types;
   inherit (lib.whatever) mkOpt;
