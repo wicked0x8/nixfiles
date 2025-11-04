@@ -21,7 +21,7 @@ in
 
     # additional packages
     services = {
-      polkit.enable = true;
+      xfce-polkit.enable = true;
       upower.enable = true;
     };
     environment.systemPackages = with pkgs; [
