@@ -18,14 +18,11 @@ in
         settings = {
 	  general.import = [ "../../../../../.config/alacritty/dank-theme.toml" ];
 	  window.opacity = 0.9; 
-            cursor = {
-              style = {
-                shape = "Underline";
-                blinking = "Always";
-              };
-              thickness = 0.20;
-            };
-            selection.save_to_clipboard = true;
+          cursor = {
+            style = {
+              shape = "Underline";
+              blinking = "Always";
+	    };
           };
         };
       };
