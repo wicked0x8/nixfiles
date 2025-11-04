@@ -13,7 +13,7 @@ in
 
   config = {
     system.stateVersion = "25.05";
-    boot.kernelPackages = pkgs.linuxPackages_latest; # todo, refactor this somewhere idk..
+    boot.kernelPackages = pkgs.linuxPackages_zen; # todo, refactor this somewhere idk..
 
     mine = {
       user = {
