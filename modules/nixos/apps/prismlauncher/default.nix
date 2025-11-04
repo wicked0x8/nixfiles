@@ -12,8 +12,7 @@ in
     environment.systemPackages = with pkgs; [ (prismlauncher.override {
       additionalPrograms = [ ffmpeg ];
       jdks = [
-        temurin-jre-bin-23
-	temurin-jre-bin-17
+        temurin-bin-21
       ];
     })];
   };
