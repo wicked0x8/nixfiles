@@ -65,7 +65,7 @@ in
             hostname = "laptop";
           };
         };
-	amdcpu-tweaks = enabled;
+	#amdcpu-tweaks = enabled;
 	fonts = enabled;
         nix.flakes = enabled;
       };
