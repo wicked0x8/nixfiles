@@ -15,6 +15,16 @@
     programs.dankMaterialShell = {
         enable = true;
         quickshell.package = pkgs.quickshell;
+
+	enableSystemd = true;
+	enableSystemMonitoring = true;
+	enableClipboard = true;
+	enableBrightnessControl = true;
+	enableColorPicker = true;
+	enableDynamicTheming = true;
+	enableAudioWavelength = true;
+	enableCalendarEvents = true;
+	enableSystemSound = true;
     };
 
     xdg.userDirs = {
