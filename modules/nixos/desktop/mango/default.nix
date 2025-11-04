@@ -26,7 +26,6 @@ in
     security.polkit.enable = true;
     environment.systemPackages = with pkgs; [
       polkit
-      xfce-polkit
       xdg-desktop-portal
       xdg-desktop-portal-wlr
       xdg-desktop-portal-gtk
