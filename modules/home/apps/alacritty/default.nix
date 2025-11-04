@@ -16,8 +16,8 @@ in
       programs.alacritty = {
         enable = true;
         settings = {
-	  general.import = ../../../../../.config/alacritty/dank-theme.toml;
-	  window.opacity = 0.9;
+	  general.import = [ "../../../../../.config/alacritty/dank-theme.toml" ];
+	  window.opacity = 0.9; 
             cursor = {
               style = {
                 shape = "Underline";
