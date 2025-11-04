@@ -31,7 +31,6 @@ in
       qt5.qtmultimedia # todo: refactor this like it's not belonging here
       qt6.qtmultimedia
       libsForQt5.qtsvg
-      libsForQt6.qtsvg
       adw-gtk3
     ];
   };
