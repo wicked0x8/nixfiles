@@ -32,6 +32,7 @@ in
       apps = {
       	alacritty = enabled;
         firefox = enabled;
+	prismlauncher = enabled;
       };
 
       desktop = {
