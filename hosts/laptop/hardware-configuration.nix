@@ -11,7 +11,7 @@
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "rtsx_usb_sdmmc" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
-  boot.kernelParams = [ "amdgpu.backlight=1" ];
+  boot.kernelParams = [ "amdgpu.backlight=0" "" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
