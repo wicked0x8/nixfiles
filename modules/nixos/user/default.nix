@@ -52,7 +52,7 @@ in
       isNormalUser = true;
       createHome = true;
       group = config.mine.user.name;
-      extraGroups = [ "wheel" "input" "storage" "bluetooth" "video" "audio" ];
+      extraGroups = [ "wheel" "input" "storage" "bluetooth" "video" "audio" "greeter" ];
       shell = config.mine.user.shell.package;
     };
   };

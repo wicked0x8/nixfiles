@@ -11,7 +11,16 @@ in
 
   config = mkIf cfg.enable {
     # Enable the greetd service in systemd
-    services.greetd.enable = true;
+    services.greetd = {
+      enable = true;
+      settings = rec {
+        initial_session = {
+	  command = "${pkgs.mango}/bin/mango";
+	  user = "greeter";
+	};
+	deafault_session = initial_session;
+      };
+    };
   };
 }
 
