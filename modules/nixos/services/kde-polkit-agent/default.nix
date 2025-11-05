@@ -10,7 +10,7 @@ in
   };
 
   config = mkIf cfg.enable {
-  environment.systemPackages = with pkgs; [ libsForQt5.polkit-kde-agent kdePackages.polkit-kde-agent-1 ];
+  environment.systemPackages = with pkgs; [ kdePackages.polkit-kde-agent-1 ];
     systemd.user.services.polkit-kde-agent = {
       description = "kde polkit authentication agent";
       wants = [ "graphical-session.target" ];
