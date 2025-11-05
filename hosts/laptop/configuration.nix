@@ -15,7 +15,6 @@ in
     system.stateVersion = "25.05";
     boot.kernelPackages = pkgs.linuxPackages_zen; # todo, refactor this somewhere idk..
     documentation.nixos.enable = false; # this too.
-    nixpkgs.config.allowUnfree = true;
 
     mine = {
       user = {
