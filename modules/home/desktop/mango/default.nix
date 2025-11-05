@@ -277,7 +277,6 @@ in
 
         autostart_sh = ''
           # Put autostart commands here (without shebang)
-	  dms run
         '';
       };
 
