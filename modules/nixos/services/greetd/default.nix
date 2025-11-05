@@ -15,7 +15,7 @@ in
       enable = true;
       settings = rec {
         initial_session = {
-	  command = "${pkgs.mango}/bin/mango";
+	  command = "dbus-run-session mango";
 	  user = "greeter";
 	};
 	deafault_session = initial_session;
