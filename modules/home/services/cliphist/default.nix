@@ -5,6 +5,8 @@ let
   cfg = config.mine.services.cliphist;
 in
 {
+  inputs.home-manager.nixosModules.home-manager
+
   options.mine.services.cliphist = {
     enable = mkEnableOption "enable cliphist service";
   };
