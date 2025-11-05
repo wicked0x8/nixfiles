@@ -21,8 +21,7 @@ in
         RestartSec = 1;
         TimeoutStopSec = 10;
       };
-      install = {
-        WantedBy = [ "graphical-session.target" ];
+      WantedBy = [ "graphical-session.target" ];
       };
     };
   };
