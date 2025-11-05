@@ -22,7 +22,6 @@ in
         TimeoutStopSec = 10;
       };
       WantedBy = [ "graphical-session.target" ];
-      };
     };
   };
 }
