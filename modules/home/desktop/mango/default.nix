@@ -277,8 +277,6 @@ in
 
         autostart_sh = ''
           # Put autostart commands here (without shebang)
-	  export QT_QPA_PLATFORMTHEME="qt6ct"
-	  export QT_QPA_PLATFORMTHEME_QT6="qt6ct"
         '';
       };
 
