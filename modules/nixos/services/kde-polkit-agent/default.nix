@@ -17,7 +17,7 @@ in
 	Service = {
 	  ExecStart = pkgs.writeShellScript "kde-polkit-agent-start" ''
 	    ${pkgs.kdePackages.polkit-kde-agent-1}/libexec/polkit-kde-authentication-agent-1
-	  ''
+	  '';
 	};
       };
     };
