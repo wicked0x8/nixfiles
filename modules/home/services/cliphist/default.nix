@@ -5,15 +5,16 @@ let
   cfg = config.mine.services.cliphist;
 in
 {
-  inputs.home-manager.nixosModules.home-manager;
 
   options.mine.services.cliphist = {
     enable = mkEnableOption "enable cliphist service";
   };
 
   config = mkIf cfg.enable {
-    home.packages = with pkgs; [ cliphist ];
-    services.cliphist.enable = true;
+    home-manager.users.${user.name} = {
+      home.packages = with pkgs ; [ cliphist ];
+      services.cliphist.enable = true;
+    };
   };
 }
 
