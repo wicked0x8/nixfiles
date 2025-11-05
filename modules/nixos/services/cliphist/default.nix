@@ -10,6 +10,7 @@ in
   };
 
   config = mkIf cfg.enable {
+    environment.systemPackages = with pkgs; [ cliphist ];
     # Enable the cliphist service in systemd
     services.cliphist = {
       enable = true;
