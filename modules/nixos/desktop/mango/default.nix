@@ -31,7 +31,7 @@ in
       qt5.qtsvg
       qt5.qtimageformats
       qt5.qtmultimedia
-      qt5.qt5compat
+      #qt5.qt5compat
     ];
   };
 }
