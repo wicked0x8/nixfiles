@@ -12,7 +12,7 @@ in
   config = mkIf cfg.enable {
     systemd.user.services = {
       "polkit-kde-autostart" = {
-        Unit = { Description = "autostart kde polkit agent" };
+        Unit = { Description = "autostart kde polkit agent"; };
 	Install = { WantedBy = [ "default.target" ]; };
 	Service = {
 	  ExecStart = pkgs.writeShellScript "kde-polkit-agent-start" ''
