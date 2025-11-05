@@ -2,10 +2,10 @@
 let
   inherit (lib) mkEnableOption mkIf;
   inherit (config.mine) user;
-  cfg = config.mine.services.seatd;
+  cfg = config.mine.services.greetd;
 in
 {
-  options.mine.services.seatd = {
+  options.mine.services.greetd = {
     enable = mkEnableOption "enable greetd service (mostly for dms)";
   };
 

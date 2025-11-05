@@ -56,6 +56,7 @@ in
 
       services = {
         seatd = enabled;
+	greetd = enabled;
       };
 
       system = {
