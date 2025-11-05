@@ -17,6 +17,10 @@ in
     documentation.nixos.enable = false; # this too.
     nixpkgs.config.allowUnfree = true;
 
+    environment.variables = {
+      QT_QPA_PLATFORMTHEME = "qt5ct";
+    };
+
     mine = {
       user = {
         enable = true;
@@ -35,7 +39,6 @@ in
       	alacritty = enabled;
         firefox = enabled;
 	prismlauncher = enabled;
-	grimblast = enabled;
 	obsidian = enabled;
       };
 
@@ -58,6 +61,8 @@ in
 
       services = {
         seatd = enabled;
+	cliphist = enabled;
+	kde-polkit-agent = enabled;
       };
 
       system = {

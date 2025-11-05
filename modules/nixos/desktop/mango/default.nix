@@ -20,9 +20,8 @@ in
     programs.mango.enable = true;
 
     # additional packages
-    services = {
-      upower.enable = true;
-    };
+    services.upower.enable = true;
+
     environment.systemPackages = with pkgs; [
       xdg-desktop-portal
       xdg-desktop-portal-wlr
@@ -32,7 +31,6 @@ in
       qt5.qtimageformats
       qt5.qtmultimedia
       qt6.qt5compat
-      qt6Packages.qt6ct
     ];
   };
 }
