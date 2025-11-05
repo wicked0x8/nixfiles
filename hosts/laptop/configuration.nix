@@ -14,6 +14,7 @@ in
   config = {
     system.stateVersion = "25.05";
     boot.kernelPackages = pkgs.linuxPackages_zen; # todo, refactor this somewhere idk..
+    documentation.nixos.enable = false; # this too.
 
     mine = {
       user = {
