@@ -28,10 +28,10 @@ in
       xdg-desktop-portal-wlr
       xdg-desktop-portal-gtk
       upower
-      qt5.qtmultimedia # todo: refactor this like it's not belonging here
-      qt6.qtmultimedia
-      libsForQt5.qtsvg
-      adw-gtk3
+      qt5.qtsvg
+      qt5.qtimageformats
+      qt5.qtmultimedia
+      qt5.qt5compat
     ];
   };
 }
