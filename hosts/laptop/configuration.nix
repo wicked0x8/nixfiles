@@ -34,6 +34,8 @@ in
       	alacritty = enabled;
         firefox = enabled;
 	prismlauncher = enabled;
+	grimblast = enabled;
+	obsidian = enabled;
       };
 
       desktop = {
