@@ -32,7 +32,7 @@ in
           blur_params_contrast = 0.9
           blur_params_saturation = 1.2
 
-          shadows = 1
+          shadows = 0
           layer_shadows = 0
           shadow_only_floating = 1
           shadows_size = 10

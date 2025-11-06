@@ -5,6 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nix-colors.url = "github:misterio77/nix-colors";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    matugen.url = "github:InioX/Matugen";
 
     nixvim = {
       url = "github:nix-community/nixvim";
@@ -44,7 +45,7 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, mango, flake-parts, dgop, dms-cli, dankMaterialShell, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, mango, flake-parts, quickshell, dankMaterialShell, matugen, ... }:
   let
     lib = nixpkgs.lib.extend (self: super: {
       whatever = import ./lib {
