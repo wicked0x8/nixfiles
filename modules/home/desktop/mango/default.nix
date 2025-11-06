@@ -180,12 +180,12 @@ in
           bind=ALT,Up,focusdir,up
           bind=ALT,Down,focusdir,down
 
-	  bind=SUPER,S,spawn,grim -g "$(slurp)" - | swappy -f - -o /home/${user.name}/pics/screenshots
+	  bind=SUPER,S,spawn,shotman --capture region
 
           # swap window
           bind=SUPER+SHIFT,Up,exchange_client,up
           bind=SUPER+SHIFT,Down,exchange_client,down
-          bind=SUPER+SHIFT,Left,exchange_client,left
+          bind=SUPER+SHIFT,Left,exchange_client,eft
           bind=SUPER+SHIFT,Right,exchange_client,right
 
           # switch window status

@@ -62,6 +62,7 @@ in
       tools = {
         fastfetch = enabled;
         nixvim = enabled;
+	shotman = enabled;
       };
 
       services = {
