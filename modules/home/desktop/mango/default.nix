@@ -110,7 +110,8 @@ in
           repeat_rate=25
           repeat_delay=600
           numlockon=0
-          xkb_rules_layout=us, ru
+          xkb_rules_layout=us,ru
+	  xkb_rules_options=grp:lalt_lshift_toggle
 
           # Trackpad
           # need relogin to make it apply
