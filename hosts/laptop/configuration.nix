@@ -36,6 +36,7 @@ in
 
       home-manager = {
 	git = enabled;
+	zsh = enabled;
       };
 
       apps = {
