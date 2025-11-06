@@ -110,7 +110,7 @@ in
           repeat_rate=25
           repeat_delay=600
           numlockon=0
-          xkb_rules_layout=us
+          xkb_rules_layout=us, ru
 
           # Trackpad
           # need relogin to make it apply

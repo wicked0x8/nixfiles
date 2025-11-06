@@ -17,7 +17,7 @@ in
     documentation.nixos.enable = false; # this too.
     nixpkgs.config.allowUnfree = true;
 
-    i18nn = {
+    i18n = {
       defaultLocale = "en_US.UTF-8";
       extraLocales = [ "ru_RU.UTF-8" ];
     };
