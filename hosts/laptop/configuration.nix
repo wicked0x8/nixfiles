@@ -35,7 +35,7 @@ in
       };
 
       home-manager = {
-	zsh = enabled;
+	git = enabled;
       };
 
       apps = {
@@ -61,7 +61,6 @@ in
       tools = {
         fastfetch = enabled;
         nixvim = enabled;
-	git = enabled;
       };
 
       services = {
