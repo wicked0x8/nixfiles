@@ -18,7 +18,7 @@ in
     nixpkgs.config.allowUnfree = true;
 
     i18n = {
-      extraLocales = [ "ru_RU.UTF-8/UTF-8"; ];
+      extraLocales = [ "ru_RU.UTF-8/UTF-8" ];
     };
 
     environment.variables = {
