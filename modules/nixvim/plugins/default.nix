@@ -3,6 +3,38 @@
   programs.nixvim = {
     plugins = {
       barbecue.enable = true;
+      snacks.enable = true;
+      colorizer.enable = true;
+      cmp-buffer.enable = true;
+      cmp-emoji.enable = true;
+      cmp-git.enable = true;
+      cmp-nvim-lsp.enable = true;
+      cmp-path.enable = true;
+      lsp-format.enable = true;
+      luasnip.enable = true;
+
+      lsp = {
+        enable = true;
+	servers = {
+	  rust-analyzer.enable = true;
+	  pyright.enable = true;
+	};
+      };
+
+      treesitter = {
+        enable = true;
+        grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+          rust
+          nix
+          python
+          json
+          toml
+          yaml
+          vim
+          vimdoc
+          regex
+        ];
+      };
 
       noice = {
         enable = true;
@@ -32,13 +64,11 @@
       lualine = {
         enable = true;
         settings = {
-          options.theme = "nord";
           sections = {
             lualine_c = [ "filename" ];
           };
         };
       };
-
     };
   };
 }
