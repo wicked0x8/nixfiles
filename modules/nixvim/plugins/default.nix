@@ -5,6 +5,7 @@
       barbecue.enable = true;
       snacks.enable = true;
       colorizer.enable = true;
+      cmp.enable = true;
       cmp-buffer.enable = true;
       cmp-emoji.enable = true;
       cmp-git.enable = true;
