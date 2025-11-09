@@ -71,6 +71,7 @@ in
         seatd = enabled;
 	cliphist = enabled;
 	kde-polkit-agent = enabled;
+	zapret = enabled;
       };
 
       system = {
