@@ -2,10 +2,10 @@
 let
   inherit (lib) mkEnableOption mkIf;
   inherit (config.mine) user;
-  cfg = config.mine.system.zapret;
+  cfg = config.mine.services.zapret;
 in
 {
-  options.mine.system.zapret = {
+  options.mine.services.zapret = {
     enable = mkEnableOption "enable zapret";
   };
 
