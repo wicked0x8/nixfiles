@@ -45,6 +45,7 @@ in
 	prismlauncher = enabled;
 	obsidian = enabled;
 	telegram = enabled;
+	anki = enabled;
       };
 
       desktop = {
