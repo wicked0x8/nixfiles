@@ -43,6 +43,7 @@ in
       	alacritty = enabled;
         firefox = enabled;
 	prismlauncher = enabled;
+	hydralauncher = enabled;
 	obsidian = enabled;
 	telegram = enabled;
 	anki = enabled;
