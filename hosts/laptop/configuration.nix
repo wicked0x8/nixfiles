@@ -65,6 +65,7 @@ in
         fastfetch = enabled;
         nixvim = enabled;
 	shotman = enabled;
+	wine = enabled;
       };
 
       services = {
