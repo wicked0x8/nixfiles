@@ -1,10 +1,10 @@
 { lib, config, pkgs, ... }:
 let
   inherit (lib) mkEnableOption mkIf;
-  cfg = config.mine.apps.firefox;
+  cfg = config.mine.apps.lutris;
 in
 {
-  options.mine.apps.firefox = {
+  options.mine.apps.lutris = {
     enable = mkEnableOption "install lutris";
   };
 
