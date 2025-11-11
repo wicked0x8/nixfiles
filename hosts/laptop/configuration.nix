@@ -46,7 +46,6 @@ in
 	obsidian = enabled;
 	telegram = enabled;
 	anki = enabled;
-	lutris = enabled;
       };
 
       desktop = {
