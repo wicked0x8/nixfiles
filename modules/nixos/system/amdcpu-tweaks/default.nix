@@ -14,7 +14,13 @@ in
     services.system76-scheduler.settings.cfsProfiles.enable = true; # Better scheduling for CPU cycles - thanks System76!!!
     services.power-profiles-daemon.enable = true;
     environment.systemPackages = with pkgs; [ vulkan-tools ];
-    hardware.opengl.enable = true;
+    
+    hardware = {
+     opengl.enable = true;
+     graphics = {
+       extraPackages = with pkgs; [ amdvlk ];
+     };
+    };
   };
 }
 
