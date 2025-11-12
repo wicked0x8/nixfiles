@@ -13,15 +13,14 @@ in
     boot.kernelParams = [ "amd_pstate=active" ];
     services.system76-scheduler.settings.cfsProfiles.enable = true; # Better scheduling for CPU cycles - thanks System76!!!
     services.power-profiles-daemon.enable = true;
-    environment.systemPackages = with pkgs; [ vulkan-tools ];
+    environment.systemPackages = with pkgs; [ vulkan-tools mesa ];
     
-    hardware = {
-     opengl.enable = true;
-     graphics = {
-       extraPackages = with pkgs; [ amdvlk ];
-     };
+    hardware.graphics = {
+      enable = true;
+      enable32Bit = true;
     };
-  };
+
+    environment.variables = { VK_ICD_FILENAMES = "run/opengl-driver/share/vulkan/icd.d/amd_icd64.json" };
 }
 
 
