@@ -15,8 +15,6 @@ in
     services.power-profiles-daemon.enable = true;
     environment.systemPackages = with pkgs; [ vulkan-tools ];
     hardware.opengl.enable = true;
-    hardware.opengl.driSupport = true;
-    hardware.opengl.driSupport32Bit = true;
   };
 }
 
