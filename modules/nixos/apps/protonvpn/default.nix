@@ -9,6 +9,6 @@ in
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ protonvpn ];
+    environment.systemPackages = with pkgs; [ protonvpn-gui ];
   };
 }
