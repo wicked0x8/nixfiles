@@ -16,6 +16,6 @@ in
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ wineWowPackages.staging ];
+    environment.systemPackages = with pkgs; [ wineWowPackages.staging winetricks ];
   };
 }
