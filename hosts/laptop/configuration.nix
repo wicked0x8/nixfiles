@@ -47,6 +47,7 @@ in
 	telegram = enabled;
 	anki = enabled;
 	lutris = enabled;
+	qbittorrent = enabled;
       };
 
       desktop = {
