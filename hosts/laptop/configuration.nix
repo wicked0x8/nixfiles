@@ -30,8 +30,6 @@ in
         enable = true;
         home-manager = enabled;
         shell.package = pkgs.zsh;
-
-	#nix-colors = enabled;
       };
 
       home-manager = {
