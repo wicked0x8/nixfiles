@@ -48,6 +48,7 @@ in
 	anki = enabled;
 	lutris = enabled;
 	qbittorrent = enabled;
+	zathura = enabled;
       };
 
       desktop = {
@@ -72,7 +73,6 @@ in
       services = {
         seatd = enabled;
 	cliphist = enabled;
-	kde-polkit-agent = enabled;
 	zapret = enabled;
       };
 
