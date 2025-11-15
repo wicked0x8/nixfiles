@@ -21,6 +21,9 @@ in
         settings = ''
           # More option see [https://github.com/DreamMaoMao/mango/wiki/](https://github.com/DreamMaoMao/mango/wiki/)
 
+	  monitorrule=eDP-1,0.55,1,tile,0,1,0,0,1920,1080,60
+	  monitorrule=HDMI-A-1,0.55,1,tile,0,1,1925,0,1920,1080,75
+
           # Window effect
           blur=0
           blur_layer=0
