@@ -46,6 +46,7 @@ in
 	anki = enabled;
 	lutris = enabled;
 	qbittorrent = enabled;
+	thunar = enabled;
 	zathura = enabled;
 	intellij-idea = enabled;
       };
