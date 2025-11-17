@@ -9,6 +9,6 @@ in
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ thunar ];
+    programs.thunar.enable = true;
   };
 }
