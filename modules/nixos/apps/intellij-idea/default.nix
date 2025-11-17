@@ -9,6 +9,6 @@ in
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ intellij-idea-community ];
+    environment.systemPackages = with pkgs; [ jetbrains.idea-community`` ];
   };
 }
