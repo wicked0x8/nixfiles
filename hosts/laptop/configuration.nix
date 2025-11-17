@@ -47,6 +47,7 @@ in
 	lutris = enabled;
 	qbittorrent = enabled;
 	zathura = enabled;
+	intellij-idea = enabled;
       };
 
       desktop = {
