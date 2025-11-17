@@ -66,7 +66,6 @@ in
         nixvim = enabled;
 	shotman = enabled;
 	wine = enabled;
-	rust = enabled;
       };
 
       services = {
