@@ -38,6 +38,15 @@
         ];
       };
 
+      # LSP support
+      lsp = {
+        enable = true;
+        servers = {
+          rust-analyzer.enable = true;
+          pyright.enable = true;
+        };
+      };
+
       # UI Improvements
       noice = {
         enable = true;
