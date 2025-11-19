@@ -1,5 +1,9 @@
 { pkgs, ... }:
 {
+  environment.systemPackages = with pkgs; [
+    rustup clang
+  ];
+
   programs.nixvim = {
     plugins = {
       # Existing plugins
@@ -15,6 +19,8 @@
       lsp-format.enable = true;
       luasnip.enable = true;
       smear-cursor.enable = true;
+      oil.enable = true;
+      nvim-autopairs = enable;
 
       # Treesitter with essential languages
       treesitter = {
