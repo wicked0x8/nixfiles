@@ -73,12 +73,10 @@
           ];
         };
       };
-
-      extraPlugins = with pkgs; [
-        vimPlugins.transparent-nvim
-      ];
-
     };
+    extraPlugins = with pkgs; [
+      unstable.vimPlugins.transparent-nvim
+    ];
   };
 }
 
