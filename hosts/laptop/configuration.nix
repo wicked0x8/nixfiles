@@ -33,47 +33,43 @@ in
       };
 
       home-manager = {
-	git = enabled;
-	zsh = enabled;
+        git = enabled;
+        zsh = enabled;
       };
 
       apps = {
-      	alacritty = enabled;
+        alacritty = enabled;
         firefox = enabled;
-	prismlauncher = enabled;
-	obsidian = enabled;
-	telegram = enabled;
-	anki = enabled;
-	lutris = enabled;
-	qbittorrent = enabled;
-	zathura = enabled;
-	vscodium = enabled;
-	#protonvpn = enabled;
+        prismlauncher = enabled;
+        obsidian = enabled;
+        telegram = enabled;
+        anki = enabled;
+        lutris = enabled;
+        qbittorrent = enabled;
+        zathura = enabled;
+        vscodium = enabled;
+        amneziavpn = enabled;
       };
 
       desktop = {
-      	#hyprland = {
-	#  enable = true;
-	#  home = true;
-	#};
-	mango = {
-	  enable = true;
-	  home = true;
-	};
-	ly = enabled;
+        mango = {
+          enable = true;
+          home = true;
+        };
+        ly = enabled;
       };
 
       tools = {
         fastfetch = enabled;
         nixvim = enabled;
-	shotman = enabled;
-	wine = enabled;
+        shotman = enabled;
+        wine = enabled;
       };
 
       services = {
         seatd = enabled;
-	cliphist = enabled;
-	zapret = enabled;
+        cliphist = enabled;
+        zapret = enabled;
       };
 
       system = {
@@ -85,9 +81,9 @@ in
             hostname = "laptop";
           };
         };
-	bluetooth = enabled;
-	amdcpu-tweaks = enabled;
-	fonts = enabled;
+        bluetooth = enabled;
+        amdcpu-tweaks = enabled;
+        fonts = enabled;
         nix.flakes = enabled;
       };
     };
