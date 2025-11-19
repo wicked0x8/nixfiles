@@ -15,8 +15,6 @@
     programs.dankMaterialShell = {
         enable = true;
         quickshell.package = pkgs.quickshell;
-
-        enableSystemd = true;
 	enableSystemMonitoring = true;
 	enableClipboard = true;
 	enableBrightnessControl = true;
