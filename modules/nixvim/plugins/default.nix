@@ -14,6 +14,7 @@
       cmp-path.enable = true;
       lsp-format.enable = true;
       luasnip.enable = true;
+      smear-cursor.enable = true;
 
       # Treesitter with essential languages
       treesitter = {
@@ -42,11 +43,11 @@
           routes = [
             {
               view = "notify";
-              filter = { event = "msg_showmode" };
+              filter = { event = "msg_showmode"; };
             }
             {
               view = "cmdline_output";
-              filter = { event = "msg_show"; min_height = 15 };
+              filter = { event = "msg_show"; min_height = 15; };
             }
           ];
         };
