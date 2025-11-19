@@ -29,7 +29,6 @@
 
     dms-cli = {
       url = "github:AvengeMedia/danklinux";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     quickshell = {
