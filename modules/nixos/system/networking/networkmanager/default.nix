@@ -12,6 +12,8 @@ in
   };
 
   config = mkIf cfg.enable {
+    environment.systemPackages = with pkgs; [ openconnect ];
+
     networking = {
       hostName = "${cfg.hostname}";
       networkmanager = {
