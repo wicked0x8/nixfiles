@@ -75,7 +75,7 @@
       };
 
       extraPlugins = with pkgs; [
-        unstable.vimPlugins.transparent-nvim
+        vimPlugins.transparent-nvim
       ];
 
     };
