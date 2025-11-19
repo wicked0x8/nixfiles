@@ -64,7 +64,7 @@
         ensureInstalled = [ "rust_analyzer" "pyright" ];
       };
 
-      mason-lspconfig = { enable = true; };
+      #mason-lspconfig = { enable = true; };
 
       # Rust-specific tooling with rust-tools.nvim
       rust-tools = { enable = true; };
