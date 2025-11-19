@@ -18,15 +18,6 @@ in
         enable = true;
         plugins = with pkgs; [ networkmanager-openconnect ];
       };
-
-      openconnect.interfaces = {
-        tonvpn = {
-          gateway = "https://tonfi-2.tonworldnews.com";
-          protocol = "anyconnect";
-          user = "fi_1763563891";
-          passwordFile = ./.tonvpnpass;
-        };
-      };
     };
 
     users.users.${user.name}.extraGroups = [ "networkmanager" ];
