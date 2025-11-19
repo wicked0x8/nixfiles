@@ -7,6 +7,11 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     matugen.url = "github:InioX/Matugen";
 
+    fenix = {
+      url = "github:nix-community/fenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -45,7 +50,7 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, mango, flake-parts, quickshell, dankMaterialShell, matugen, ... }:
+  outputs = inputs@{ self, nixpkgs, fenix, home-manager, mango, flake-parts, quickshell, dankMaterialShell, matugen, ... }:
   let
     lib = nixpkgs.lib.extend (self: super: {
       whatever = import ./lib {
@@ -53,8 +58,8 @@
         lib = self;
       };
     });
-    system = "x86_64";
-    pkgs = import nixpkgs { inherit system; };
+    #system = "x86_64";
+    #pkgs = import nixpkgs { inherit system; };
   in
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [ "x86_64-linux" ];
