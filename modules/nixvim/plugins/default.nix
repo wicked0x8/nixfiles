@@ -17,7 +17,10 @@
       lsp = {
         enable = true;
 	servers = {
-	  rust_analyzer.enable = true;
+	  rust_analyzer = {
+	    installCargo = true;
+	    installRustc = true;
+	  };
 	  pyright.enable = true;
 	};
       };
