@@ -14,7 +14,7 @@ in
   };
 
   config = mkIf cfg.enable {
-    nixpkgs.overlays = [ (import ${fetchTarball "https://github.com/nix-community/fenix/archive/main.tar.gz"}) ];
+    nixpkgs.overlays = [ (import (fetchTarball "https://github.com/nix-community/fenix/archive/main.tar.gz")) ];
     environment.systemPackages = with pkgs; [
       (fenix.complete.withComponents [
         "cargo"

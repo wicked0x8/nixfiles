@@ -7,11 +7,6 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     matugen.url = "github:InioX/Matugen";
 
-    fenix = {
-      url = "github:nix-community/fenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
