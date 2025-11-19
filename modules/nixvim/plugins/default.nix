@@ -2,6 +2,7 @@
 {
   programs.nixvim = {
     plugins = {
+      # Existing plugins
       barbecue.enable = true;
       snacks.enable = true;
       colorizer.enable = true;
@@ -14,12 +15,13 @@
       lsp-format.enable = true;
       luasnip.enable = true;
 
+      # Treesitter with essential languages
       treesitter = {
         enable = true;
         grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
           rust
-          nix
           python
+          nix
           json
           toml
           yaml
@@ -29,6 +31,7 @@
         ];
       };
 
+      # UI Improvements
       noice = {
         enable = true;
         settings = {
@@ -39,16 +42,11 @@
           routes = [
             {
               view = "notify";
-              filter = {
-                event = "msg_showmode";
-              };
+              filter = { event = "msg_showmode" };
             }
             {
               view = "cmdline_output";
-              filter = {
-                event = "msg_show";
-                min_height = 15;
-              };
+              filter = { event = "msg_show"; min_height = 15 };
             }
           ];
         };
@@ -56,12 +54,31 @@
 
       lualine = {
         enable = true;
-        settings = {
-          sections = {
-            lualine_c = [ "filename" ];
-          };
+        settings = { sections = { lualine_c = [ "filename" ]; }; };
+      };
+
+      # New LSP tooling management plugins
+      mason = {
+        enable = true;
+        ensureInstalled = [ "rust_analyzer" "pyright" ];
+      };
+
+      mason-lspconfig = { enable = true; };
+
+      # Rust-specific tooling with rust-tools.nvim
+      rust-tools = { enable = true; };
+
+      # Null-ls for extra linting/formatting
+      null-ls = {
+        enable = true;
+        sources = {
+          enable = true;
+          configured = [
+            "black"            # Python formatter
+            "flake8"           # Python linter
+            "rustfmt"          # Rust formatter
+          ];
         };
       };
     };
   };
-}
