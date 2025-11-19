@@ -60,19 +60,6 @@
 
       # Rust-specific tooling with rust-tools.nvim
       rust-tools = { enable = true; };
-
-      # Null-ls for extra linting/formatting
-      null-ls = {
-        enable = true;
-        sources = {
-          enable = true;
-          configured = [
-            "black"            # Python formatter
-            "flake8"           # Python linter
-            "rustfmt"          # Rust formatter
-          ];
-        };
-      };
     };
     extraPlugins = with pkgs; [
       unstable.vimPlugins.transparent-nvim
