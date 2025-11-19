@@ -47,7 +47,7 @@ in
 	lutris = enabled;
 	qbittorrent = enabled;
 	zathura = enabled;
-	protonvpn = enabled;
+	#protonvpn = enabled;
       };
 
       desktop = {
