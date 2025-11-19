@@ -1,10 +1,10 @@
 { lib, config, pkgs, ... }:
 let
   inherit (lib) mkEnableOption mkIf;
-  cfg = config.mine.apps.amnezia-vpn;
+  cfg = config.mine.apps.amneziavpn;
 in
 {
-  options.mine.apps.amnezia-vpn = {
+  options.mine.apps.amneziavpn = {
     enable = mkEnableOption "install amnezia-vpn";
   };
 
