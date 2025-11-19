@@ -59,7 +59,7 @@
       };
 
       # New LSP tooling management plugins
-      mason = {
+      mason-nvim = {
         enable = true;
         ensureInstalled = [ "rust_analyzer" "pyright" ];
       };
