@@ -9,7 +9,7 @@ in
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ wireguard-tools protonvpn-gui ];
+    environment.systemPackages = with pkgs; [ wireguard-tools protonvpn-cli ];
     networking.firewall.checkReversePath = false;
   };
 }
