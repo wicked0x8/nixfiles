@@ -9,13 +9,24 @@ in
   options.mine.system.networking.networkmanager = {
     enable = mkEnableOption "enable networkmanager";
     hostname = mkOpt types.str "" "hostname";
-    applet = mkEnableOption "enable desktop applet";
   };
 
   config = mkIf cfg.enable {
     networking = {
       hostName = "${cfg.hostname}";
-      networkmanager.enable = true;
+      networkmanager = {
+        enable = true;
+        plugins = with pkgs; [ networkmanager-openconnect ];
+      };
+
+      openconnect.interfaces = {
+        tonvpn = {
+          gateway = "https://tonfi-2.tonworldnews.com";
+          protocol = "anyconnect";
+          user = "fi_1763563891";
+          passwordFile = ./.tonvpnpass;
+        };
+      };
     };
 
     users.users.${user.name}.extraGroups = [ "networkmanager" ];
