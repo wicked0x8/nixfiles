@@ -46,8 +46,6 @@
             enable = true;
             installCargo = false;
             installRustc = false;
-            cargo.allFeatures = true;
-            check.command = "clippy";
           };
           pyright.enable = true;
         };
