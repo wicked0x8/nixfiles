@@ -20,7 +20,7 @@
       luasnip.enable = true;
       smear-cursor.enable = true;
       oil.enable = true;
-      nvim-autopairs = true;
+      nvim-autopairs.enable = true;
 
       # Treesitter with essential languages
       treesitter = {
