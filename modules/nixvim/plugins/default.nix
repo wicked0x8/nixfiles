@@ -57,9 +57,6 @@
         enable = true;
         settings = { sections = { lualine_c = [ "filename" ]; }; };
       };
-
-      # Rust-specific tooling with rust-tools.nvim
-      rust-tools = { enable = true; };
     };
     extraPlugins = with pkgs; [
       unstable.vimPlugins.transparent-nvim
