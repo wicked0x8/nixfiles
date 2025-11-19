@@ -14,17 +14,6 @@
       lsp-format.enable = true;
       luasnip.enable = true;
 
-      lsp = {
-        enable = true;
-	servers = {
-	  rust_analyzer = {
-	    installCargo = true;
-	    installRustc = true;
-	  };
-	  pyright.enable = true;
-	};
-      };
-
       treesitter = {
         enable = true;
         grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
