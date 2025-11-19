@@ -63,6 +63,7 @@ in
         nixvim = enabled;
         shotman = enabled;
         wine = enabled;
+        tun2socks = enabled;
       };
 
       services = {
