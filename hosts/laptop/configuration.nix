@@ -48,7 +48,6 @@ in
         qbittorrent = enabled;
         zathura = enabled;
         vscodium = enabled;
-        amneziavpn = enabled;
       };
 
       desktop = {
