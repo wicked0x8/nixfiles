@@ -21,6 +21,37 @@
       smear-cursor.enable = true;
       oil.enable = true;
       nvim-autopairs.enable = true;
+      web-devicons.enable = true;
+
+
+      # Configuring completion system
+      cmp = {
+        enable = true;
+        autoEnableSources = true;
+        settings = {
+          sources = [
+            { name = "right"; }
+            { name = "nvim_lsp"; }
+            { name = "luasnip"; }
+            { name = "buffer"; }
+            { name = "nvim_lua"; }
+            { name = "path"; }
+          ];
+          snippet = {
+            expand = "luasnip";
+          };
+          mapping = {
+            "<CR>" = "cmp.mapping.confirm({ select = true })";
+            "<Down>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+            "<Up>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+            "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+            "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+            "<C-d>" = "cmp.mapping.scroll_docs(-4)";
+            "<C-f>" = "cmp.mapping.scroll_docs(4)";
+            "<C-Space>" = "cmp.mapping.complete()";
+          };
+        };
+      };
 
       # Treesitter with essential languages
       treesitter = {

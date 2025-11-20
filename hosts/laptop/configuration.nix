@@ -81,6 +81,7 @@ in
             hostname = "laptop";
           };
         };
+
         bluetooth = enabled;
         amdcpu-tweaks = enabled;
         fonts = enabled;
