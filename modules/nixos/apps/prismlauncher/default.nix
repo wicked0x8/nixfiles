@@ -16,7 +16,7 @@ in
       ];
     })];
 
-    environment.systemPackages = with pkgs; [ jdk21_headless ]
+    environment.systemPackages = with pkgs; [ jdk21_headless ];
   };
 }
 
