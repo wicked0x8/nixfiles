@@ -21,7 +21,7 @@
       oil.enable = true;
       nvim-autopairs.enable = true;
       web-devicons.enable = true;
-      vim-indent-guides.enable = true;
+      indent-blankline.enable = true;
       nvim-tree.enable = true;
 
 
