@@ -22,7 +22,7 @@
       nvim-autopairs.enable = true;
       web-devicons.enable = true;
       vim-indent-guides.enable = true;
-      nerdtree.enable = true;
+      nvim-tree.enable = true;
 
 
       # Configuring completion system
