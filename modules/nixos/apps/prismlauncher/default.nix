@@ -15,6 +15,8 @@ in
         temurin-bin-21
       ];
     })];
+
+    environment.systemPackages = with pkgs; [ jdk21_headless ]
   };
 }
 
