@@ -9,14 +9,16 @@ in
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ (prismlauncher.override {
+    environment.systemPackages = with pkgs; [
+
+    jdk21_headless # todo, recfactor this somewhere
+
+    (prismlauncher.override {
       additionalPrograms = [ ffmpeg ];
       jdks = [
         temurin-bin-21
       ];
     })];
-
-    environment.systemPackages = with pkgs; [ jdk21_headless ];
   };
 }
 
