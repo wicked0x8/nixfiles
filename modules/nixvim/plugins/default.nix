@@ -74,7 +74,7 @@
       # LSP support
       lsp = {
         enable = true;
-        inlayHints = { enable = true; };
+        inlayHints.enable = true;
         servers = {
           rust_analyzer = {
             enable = true;
