@@ -48,6 +48,7 @@ in
         qbittorrent = enabled;
         zathura = enabled;
         vscodium = enabled;
+        steam = enabled;
       };
 
       desktop = {
