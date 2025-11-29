@@ -36,5 +36,10 @@ in
       list = true;
       listchars = "trail:·,extends:+,precedes:+";
     };
+
+    diagnostic = {
+      virtual_lines.current_line = true;
+      virtual_text = true;
+    }
   };
 }

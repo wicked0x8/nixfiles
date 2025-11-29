@@ -82,13 +82,6 @@
           };
           pyright.enable = true;
         };
-        diagnostics = {
-          enable = true;
-          signs.enable = true;
-          virtualText = true;
-          underline = true;
-          updateInInsertMode = false;
-        };
       };
 
       # UI Improvements
