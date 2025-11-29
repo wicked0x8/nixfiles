@@ -74,7 +74,6 @@
       # LSP support
       lsp = {
         enable = true;
-        inlayHints.enable = true;
         servers = {
           rust_analyzer = {
             enable = true;
@@ -82,6 +81,13 @@
             installRustc = false;
           };
           pyright.enable = true;
+        };
+        diagnostics = {
+          enable = true;
+          signs.enable = true;
+          virtualText = true;
+          underline = true;
+          updateInInsertMode = false;
         };
       };
 
