@@ -24,6 +24,8 @@
       indent-blankline.enable = true;
       nvim-tree.enable = true;
       tiny-inline-diagnostic.enable = true;
+      copilot-lsp.enable = true;
+      copilot-cmp.enable = true;
 
 
       # Configuring completion system
