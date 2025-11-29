@@ -269,8 +269,8 @@ in
           mousebind=SUPER,btn_left,moveresize,curmove
           mousebind=NONE,btn_middle,togglemaximizescreen,0
           mousebind=SUPER,btn_right,moveresize,curresize
-         
           mousebind=NONE,btn_right,killclient,0
+          mousebind=NONE,btn_left,toggleoverview,-1
 
           # Axis Bindings
           axisbind=SUPER,UP,viewtoleft_have_client
@@ -285,7 +285,6 @@ in
           # Put autostart commands here (without shebang)
         '';
       };
-      # mousebind=NONE,btn_left,toggleoverview,-1
       # Add mango Home Manager module here
       imports = [
         inputs.mango.hmModules.mango
