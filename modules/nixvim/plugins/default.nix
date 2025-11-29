@@ -23,6 +23,7 @@
       web-devicons.enable = true;
       indent-blankline.enable = true;
       nvim-tree.enable = true;
+      tiny-inline-diagnostic.enable = true;
 
 
       # Configuring completion system
