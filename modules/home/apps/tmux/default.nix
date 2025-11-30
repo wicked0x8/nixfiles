@@ -18,8 +18,8 @@ in
         plugins = with pkgs; [
           tmuxPlugins.sensible
           tmuxPlugins.yank
-          tmuxPlugins.tmux-resurrect
-          tmuxPlugins.tmux-continuum
+          tmuxPlugins.resurrect
+          tmuxPlugins.continuum
           tmuxPlugins.tmux-powerline
         ];
       };
