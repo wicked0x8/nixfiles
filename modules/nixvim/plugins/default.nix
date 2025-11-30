@@ -1,7 +1,11 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    rustup clang
+    rustup
+    clang
+    pkg-config
+    openssl
+    libopenssl
   ];
 
   programs.nixvim = {
