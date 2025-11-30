@@ -5,21 +5,23 @@
   ...
 }:
 let
-
   inherit (lib) mkEnableOption mkIf;
   cfg = config.mine.tools.hf;
-
 in
 {
   options.mine.tools.hf = {
-    enable = mkEnableOption "enable huggingface cli";
+    enable = mkEnableOption "enable huggingface cli and gradio for spaces";
   };
 
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      (python3.withPackages (ps: [
-        ps.huggingface-hub
+      (python3.withPackages (ps: with ps; [
+        huggingface-hub
+        gradio                    # Gradio web UI framework
+        gradio-client             # Gradio client for Discord deployment
+        transformers              # Model loading for HF Spaces
       ]))
+      huggingface-cli           # Official HF CLI
     ];
   };
 }
