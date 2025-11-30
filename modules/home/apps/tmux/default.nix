@@ -20,7 +20,7 @@ in
           tmuxPlugins.yank
           tmuxPlugins.resurrect
           tmuxPlugins.continuum
-          tmuxPlugins.tmux-powerline
+          tmuxPlugins.tmux2k
         ];
       };
     };
