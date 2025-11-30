@@ -23,7 +23,7 @@
     };
 
     hf-nix = {
-      "github:huggingface/hf-nix";
+      url = "github:huggingface/hf-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
