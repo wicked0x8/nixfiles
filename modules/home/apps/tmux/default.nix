@@ -20,7 +20,6 @@ in
           tmuxPlugins.yank
           tmuxPlugins.resurrect
           tmuxPlugins.continuum
-          tmuxPlugins.tmux2k
         ];
       };
     };
