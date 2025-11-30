@@ -5,7 +5,6 @@
     clang
     pkg-config
     openssl
-    libopenssl
   ];
 
   programs.nixvim = {
