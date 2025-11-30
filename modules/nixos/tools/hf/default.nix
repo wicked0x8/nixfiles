@@ -21,7 +21,6 @@ in
         gradio-client             # Gradio client for Discord deployment
         transformers              # Model loading for HF Spaces
       ]))
-      huggingface-cli           # Official HF CLI
     ];
   };
 }
