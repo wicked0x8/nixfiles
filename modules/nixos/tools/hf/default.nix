@@ -17,9 +17,8 @@ in
     environment.systemPackages = with pkgs; [
       (python3.withPackages (ps: with ps; [
         huggingface-hub
-        gradio                    # Gradio web UI framework
-        gradio-client             # Gradio client for Discord deployment
-        transformers              # Model loading for HF Spaces
+        gradio-client
+        transformers
       ]))
     ];
   };
