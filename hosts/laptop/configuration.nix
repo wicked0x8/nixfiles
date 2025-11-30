@@ -66,6 +66,7 @@ in
         wine = enabled;
         tun2socks = enabled;
         make = enabled;
+        hf = enabled;
       };
 
       services = {
