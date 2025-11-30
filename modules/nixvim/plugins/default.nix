@@ -3,8 +3,6 @@
   environment.systemPackages = with pkgs; [
     rustup
     clang
-    pkg-config
-    openssl
   ];
 
   programs.nixvim = {
