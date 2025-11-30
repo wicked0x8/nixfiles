@@ -14,6 +14,14 @@ in
     home-manager.users.${user.name} = {
       programs.tmux = {
         enable = true;
+        mouse = true;
+        plugins = with pkgs; [
+          tmuxPlugins.sensible
+          tmuxPlugins.yank
+          tmuxPlugins.tmux-ressurect
+          tmuxPlugins.tmux-continuum
+          tmuxPlugins.tmux-powerline
+        ];
       };
     };
   };
