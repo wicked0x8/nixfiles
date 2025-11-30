@@ -22,6 +22,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    hf-nix = {
+      "github:huggingface/hf-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     mango = {
       url = "github:DreamMaoMao/mango";
       inputs.nixpkgs.follows = "nixpkgs";
