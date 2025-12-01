@@ -20,6 +20,7 @@ in
           tmuxPlugins.yank
           tmuxPlugins.resurrect
           tmuxPlugins.continuum
+          tmuxPlugins.dotbar
         ];
       };
     };
