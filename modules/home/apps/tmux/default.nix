@@ -14,13 +14,34 @@ in
     home-manager.users.${user.name} = {
       programs.tmux = {
         enable = true;
+
         mouse = true;
+        baseIndex = 1;
+
+        extraConfig = ''
+          set-option -g renumber-windows on
+          setw -g pane-base-index 1
+        '';
+
         plugins = with pkgs; [
           tmuxPlugins.sensible
           tmuxPlugins.yank
-          tmuxPlugins.resurrect
-          tmuxPlugins.continuum
-          tmuxPlugins.dotbar
+
+          {
+            plugin = tmuxPlugins.resurrect;
+            extraConfig = "set -g @resurrect-strategy-nvim 'session'";
+          }
+          {
+            plugin = tmuxPlugins.continuum;
+            extraConfig = ''
+              set -g @continuum-restore 'on'
+              set -g @continuum-save-interval '60'
+            '';
+          }
+          {
+            plugin = tmuxPlugins.dotbar;
+            extraConfig = "set -g @tmux-dotbar-right true";
+          }
         ];
       };
     };
