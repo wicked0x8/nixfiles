@@ -11,6 +11,7 @@ in
   };
 
   config = mkIf cfg.enable {
+    environment.systemPackages = with pkgs; [ moreutils ];
     home-manager.users.${user.name} = {
       programs.tmux = {
         enable = true;
@@ -38,7 +39,7 @@ in
               set -g @resurrect-capture-pane-contents 'on'
               set -g @resurrect-strategy-nvim 'session'
               set -g @resurrect-dir "@HOME/.tmux/resurrect"
-              set -g @resurrect-hook-post-save-all "sed -i 's| --cmd .*-vim-pack-dir||g; s|/etc/profiles/per-user/$USER/bin/||g; s|/nix/store/.*/bin/||g' $(readlink -f $HOME/.tmux/resurrect/last)"
+              set -g @resurrect-hook-post-save-all 'target=$(readlink -f $resurrect_dir/last); sed "s| --cmd .*-vim-pack-dir||g; s|/etc/profiles/per-user/$USER/bin/||g; s|/home/$USER/.nix-profile/bin/||g; s|/nix/store/.*/bin/||g; s|/run/current-system/sw/bin/||g" $target | sponge $target'
             '';
           }
           {
