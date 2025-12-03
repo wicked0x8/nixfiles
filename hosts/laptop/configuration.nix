@@ -49,7 +49,7 @@ in
         zathura = enabled;
         vscodium = enabled;
         steam = enabled;
-        tmux = enabled;
+        zellij = enabled;
       };
 
       desktop = {
