@@ -29,7 +29,12 @@ in
 
           {
             plugin = tmuxPlugins.resurrect;
-            extraConfig = "set -g @resurrect-strategy-nvim 'session'";
+            extraConfig = ''
+              set -g @resurrect-strategy-nvim 'session'
+              resurrect_dir=~/.local/share/tmux/resurrect
+              set -g @resurrect-dir &resurrect_dir
+              set -g @resurrect-hook-post-save-all "sed -i 's| --cmd .*-vim-pack-dir||g; s|/etc/profiles/per-user/$USER/bin/||g; s|/nix/store/.*/bin/||g' $(readlink -f $resurrect_dir/last)"
+            '';
           }
           {
             plugin = tmuxPlugins.continuum;
