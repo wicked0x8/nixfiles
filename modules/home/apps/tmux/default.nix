@@ -17,6 +17,9 @@ in
 
         mouse = true;
         baseIndex = 1;
+        terminal = "tmux-256color";
+        historyLimit = 100000;
+        escapeTime = 0;
 
         extraConfig = ''
           set-option -g renumber-windows on
@@ -24,16 +27,18 @@ in
         '';
 
         plugins = with pkgs; [
+          tmuxPlugins.pain-control
+          tmuxPlugins.sessionist
           tmuxPlugins.sensible
           tmuxPlugins.yank
 
           {
             plugin = tmuxPlugins.resurrect;
             extraConfig = ''
-              resurrect_dir="$HOME/.tmux/resurrect"
-              set -g @resurrect-dir $resurrect_dir
+              set -g @resurrect-capture-pane-contents 'on'
               set -g @resurrect-strategy-nvim 'session'
-              set -g @resurrect-hook-post-save-all "sed -i 's| --cmd .*-vim-pack-dir||g; s|/etc/profiles/per-user/$USER/bin/||g; s|/nix/store/.*/bin/||g' $(readlink -f $resurrect_dir/last)"
+              set -g @resurrect-dir "@HOME/.tmux/resurrect"
+              set -g @resurrect-hook-post-save-all "sed -i 's| --cmd .*-vim-pack-dir||g; s|/etc/profiles/per-user/$USER/bin/||g; s|/nix/store/.*/bin/||g' $(readlink -f $HOME/.tmux/resurrect/last)"
             '';
           }
           {
