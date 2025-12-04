@@ -27,6 +27,7 @@
       tiny-inline-diagnostic.enable = true;
       copilot-lsp.enable = true;
       copilot-cmp.enable = true;
+      hardtime.enable = true;
 
 
       # Configuring completion system
