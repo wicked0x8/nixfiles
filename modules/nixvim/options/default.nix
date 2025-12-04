@@ -37,10 +37,11 @@ in
       listchars = "trail:·,extends:+,precedes:+";
     };
 
+    clipboard.register = "unnamedplus";
+
     diagnostic = {
       settings = {
         virtual_lines.current_line = true;
-        virtual_text = true;
       };
     };
   };
