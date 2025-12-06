@@ -50,6 +50,7 @@ in
         vscodium = enabled;
         steam = enabled;
         zellij = enabled;
+        anydesk = enabled;
       };
 
       desktop = {
