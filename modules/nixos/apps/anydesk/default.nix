@@ -4,7 +4,7 @@ let
   cfg = config.mine.apps.anydesk;
 in
 {
-  options.mine.apps.firefox = {
+  options.mine.apps.anydesk = {
     enable = mkEnableOption "install anydesk";
   };
 
