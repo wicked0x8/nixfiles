@@ -16,6 +16,6 @@ in
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ claude-code ];
+    environment.systemPackages = with pkgs; [ code-cursor ];
   };
 }
