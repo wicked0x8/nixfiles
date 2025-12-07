@@ -7,10 +7,10 @@
 let
   inherit (lib) mkEnableOption mkIf;
   inherit (config.mine) user;
-  cfg = config.mine.home-manager.zoxide;
+  cfg = config.mine.tools.zoxide;
 in
 {
-  options.mine.home-manager.zoxide = {
+  options.mine.tools.zoxide = {
     enable = mkEnableOption "enable zoxide";
   };
 
