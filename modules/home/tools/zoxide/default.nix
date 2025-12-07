@@ -15,8 +15,6 @@ in
   };
 
   config = mkIf cfg.enable {
-    mine.tools.zoxide.enable = true;
-
     home-manager.users.${user.name} = {
       home.packages = with pkgs; [ zoxide ];
       programs.zoxide.enableZshIntegration = true;
