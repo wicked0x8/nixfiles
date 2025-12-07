@@ -19,11 +19,11 @@ in
           #pane_frames = false;
           default_layout = "compact";
           theme = "ansi";
-        };
 
-        load_plugins = [
-          "https://github.com/liam-mackie/zsm/releases/download/v0.4.1/zsm.wasm"
-        ];
+          load_plugins = {
+            "https://github.com/liam-mackie/zsm/releases/download/v0.4.1/zsm.wasm";
+          };
+        };
       };
     };
   };
