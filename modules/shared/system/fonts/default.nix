@@ -18,7 +18,7 @@ in
       fontconfig = {
         enable = true;
         defaultFonts = {
-          monospace = [ "Fira Code" ];
+          monospace = [ "JetBrains Mono Nerd Font" ];
         };
       };
     };
