@@ -7,11 +7,6 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     matugen.url = "github:InioX/Matugen";
 
-    fenix = {
-      url = "github:nix-community/fenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -32,16 +27,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    dms-cli = {
-      url = "github:AvengeMedia/danklinux";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    quickshell = {
-      url = "github:quickshell-mirror/quickshell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     dankMaterialShell = {
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -50,7 +35,7 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, fenix, home-manager, mango, flake-parts, quickshell, dankMaterialShell, matugen, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, mango, flake-parts, dankMaterialShell, dgop, matugen, ... }:
   let
     lib = nixpkgs.lib.extend (self: super: {
       whatever = import ./lib {
