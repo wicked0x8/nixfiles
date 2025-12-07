@@ -68,7 +68,6 @@ in
         wine = enabled;
         tun2socks = enabled;
         make = enabled;
-        ventoy = enabled;
       };
 
       services = {
