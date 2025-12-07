@@ -16,8 +16,10 @@ in
 
   config = mkIf cfg.enable {
     home-manager.users.${user.name} = {
-      home.packages = with pkgs; [ zoxide ];
-      programs.zoxide.enableZshIntegration = true;
+      programs.zoxide = {
+        enable = true;
+        enableZshIntegration = true;
+      };
     };
   };
 }
