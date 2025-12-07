@@ -69,6 +69,7 @@ in
         tun2socks = enabled;
         make = enabled;
         zoxide = enabled;
+        claude-code = enabled;
       };
 
       services = {
