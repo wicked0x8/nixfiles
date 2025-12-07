@@ -21,7 +21,7 @@ in
           theme = "ansi";
 
           load_plugins = {
-            "https://github.com/liam-mackie/zsm/releases/download/v0.4.1/zsm.wasm";
+            "https://github.com/liam-mackie/zsm/releases/download/v0.4.1/zsm.wasm"
           };
         };
       };
