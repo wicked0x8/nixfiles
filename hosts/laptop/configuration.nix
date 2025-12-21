@@ -5,6 +5,7 @@ let
 in
 {
   imports = [
+    ./cachix.nix
     ./hardware-configuration.nix
     ../../modules/nixos/import.nix
     ../../modules/home/import.nix
@@ -13,8 +14,6 @@ in
 
   config = {
     system.stateVersion = "25.05";
-    boot.kernelPackages = pkgs.linuxPackages_zen; # todo, refactor this somewhere idk..
-    documentation.nixos.enable = false; # this too.
     nixpkgs.config.allowUnfree = true;
 
     i18n = {
@@ -49,16 +48,20 @@ in
         zathura = enabled;
         vscodium = enabled;
         steam = enabled;
-        zellij = enabled;
-        anydesk = enabled;
+        rustdesk = enabled;
       };
 
       desktop = {
+        niri = {
+          enable = true;
+          home = true;
+        };
         mango = {
           enable = true;
           home = true;
         };
         ly = enabled;
+        dms = enabled;
       };
 
       tools = {
@@ -66,10 +69,9 @@ in
         nixvim = enabled;
         shotman = enabled;
         wine = enabled;
-        tun2socks = enabled;
         make = enabled;
         zoxide = enabled;
-        claude-code = enabled;
+        appimage-run = enabled;
       };
 
       services = {
@@ -79,7 +81,17 @@ in
       };
 
       system = {
-        boot.grub = enabled;
+        boot = {
+          grub = enabled;
+          kernel = {
+            enable = true;
+            packages = pkgs.linuxPackages_zen;
+          };
+        };
+
+        documentation = {
+          enable = false;
+        };
 
         networking = {
           networkmanager = {

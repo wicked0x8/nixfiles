@@ -1,6 +1,7 @@
-{ lib, config, pkgs, ...}:
+{ lib, config, pkgs, ... }:
 
-with lib; let
+with lib;
+let
   inherit (lib.whatever) mkOpt;
   cfg = config.mine.system.utils;
   dev = with pkgs; [

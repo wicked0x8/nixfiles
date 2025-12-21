@@ -7,15 +7,18 @@
 let
 
   inherit (lib) mkEnableOption mkIf;
-  cfg = config.mine.tools.claude-code;
+  cfg = config.mine.tools.appimage-run;
 
 in
 {
-  options.mine.tools.claude-code = {
+  options.mine.tools.appimage-run = {
     enable = mkEnableOption "enable claude code";
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ code-cursor ];
+    programs.appimage = {
+      enable = true;
+      binfmt = true;
+    };
   };
 }

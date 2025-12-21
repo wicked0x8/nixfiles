@@ -1,9 +1,7 @@
 { lib, config, ... }:
 let
-
   inherit (lib) mkEnableOption mkIf;
   cfg = config.mine.system.boot.grub;
-
 in
 {
   options.mine.system.boot.grub = {

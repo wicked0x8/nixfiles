@@ -1,15 +1,7 @@
-{
-  lib,
-  inputs,
-  config,
-  pkgs,
-  ...
-}:
+{ lib, config, pkgs, ... }:
 let
-
   inherit (lib) mkEnableOption mkIf;
   cfg = config.mine.desktop.mango;
-
 in
 {
   options.mine.desktop.mango = {
@@ -34,4 +26,3 @@ in
     ];
   };
 }
-

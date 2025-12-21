@@ -1,24 +1,17 @@
-{
-  lib,
-  config,
-  inputs,
-  ...
-}:
+{ lib, config, inputs, ... }:
 let
-
   inherit (lib) mkEnableOption mkIf;
   cfg = config.mine.tools.nixvim;
-
 in
 {
-  options.mine.tools.nixvim = {
-    enable = mkEnableOption "nixvim";
-  };
-
   imports = [
     inputs.nixvim.nixosModules.nixvim
     ../../../nixvim/import.nix
   ];
+
+  options.mine.tools.nixvim = {
+    enable = mkEnableOption "nixvim";
+  };
 
   config = mkIf cfg.enable {
     programs.nixvim = {

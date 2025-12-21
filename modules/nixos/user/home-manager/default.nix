@@ -1,4 +1,4 @@
-{ lib, config, inputs, ...}:
+{ lib, config, inputs, ... }:
 let
   inherit (lib) mkIf;
   inherit (config.mine) user;
@@ -11,7 +11,6 @@ in
 
   config = mkIf cfg.enable {
     home-manager = {
-      useGlobalPkgs = true;
       useUserPackages = true;
       extraSpecialArgs = {
         inherit inputs;

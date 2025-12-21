@@ -1,14 +1,7 @@
 { lib, pkgs, config, ... }:
-
 let
   inherit (lib.whatever) mkOpt;
-  inherit (config.mine) user;
-
-  inherit (lib)
-    mkEnableOption
-    mkOption
-    mkIf
-    types;
+  inherit (lib) mkOption mkIf types;
 in
 
 {
@@ -52,7 +45,7 @@ in
       isNormalUser = true;
       createHome = true;
       group = config.mine.user.name;
-      extraGroups = [ "wheel" "input" "storage" "bluetooth" "video" "audio" "greeter" ];
+      extraGroups = [ "wheel" "input" "storage" "bluetooth" "video" "audio" "render" ];
       shell = config.mine.user.shell.package;
     };
   };

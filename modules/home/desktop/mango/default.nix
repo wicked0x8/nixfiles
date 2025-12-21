@@ -6,7 +6,6 @@ let
   mangoModule = inputs.mango.nixosModules.mango;
 in
 {
-  
   imports = [ mangoModule ];
 
   options.mine.desktop.mango = {
@@ -283,6 +282,7 @@ in
 
         autostart_sh = ''
           # Put autostart commands here (without shebang)
+          dms run -d
         '';
       };
       # Add mango Home Manager module here
