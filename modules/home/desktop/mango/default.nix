@@ -95,7 +95,7 @@ in
           overviewgappo=30
 
           # Misc
-          no_border_when_single=0
+          no_border_when_single=1
           axis_bind_apply_timeout=100
           focus_on_activate=1
           inhibit_regardless_of_visibility=0
