@@ -26,7 +26,13 @@ in
           tmuxPlugins.extrakto
           tmuxPlugins.pain-control
           tmuxPlugins.sensible
+          tmuxPlugins.gitmux
         ];
+
+        extraConfig = ''
+          set -g default-terminal "tmux-256color"
+          set-option -sa terminal-features ",screen-256color:RGB"
+        ''
       };
     };
   };
