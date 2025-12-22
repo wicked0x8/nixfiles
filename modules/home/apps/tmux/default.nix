@@ -25,7 +25,7 @@ in
           tmuxPlugins.sessionist
           tmuxPlugins.extrakto
           tmuxPlugins.pain-control
-          tmuxPlugins.which-key
+          tmuxPlugins.sensible
         ];
       };
     };
