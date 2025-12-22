@@ -52,15 +52,12 @@ in
       };
 
       desktop = {
-        niri = {
-          enable = true;
-          home = true;
-        };
         mango = {
           enable = true;
           home = true;
         };
-        ly = enabled;
+        #ly = enabled;
+        lemurs = enabled;
         dms = enabled;
       };
 
