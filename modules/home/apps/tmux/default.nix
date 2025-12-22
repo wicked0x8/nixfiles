@@ -32,7 +32,7 @@ in
         extraConfig = ''
           set -g default-terminal "tmux-256color"
           set-option -sa terminal-features ",screen-256color:RGB"
-        ''
+        '';
       };
     };
   };
