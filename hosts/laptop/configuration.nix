@@ -37,6 +37,7 @@ in
       };
 
       apps = {
+        tmux = enabled;
         alacritty = enabled;
         firefox = enabled;
         prismlauncher = enabled;
