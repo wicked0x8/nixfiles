@@ -23,7 +23,6 @@ in
 
         plugins = with pkgs; [
           tmuxPlugins.sessionist
-          tmuxPlugins.color
           tmuxPlugins.extrakto
           tmuxPlugins.pain-control
           tmuxPlugins.which-key
