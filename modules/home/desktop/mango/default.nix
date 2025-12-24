@@ -287,7 +287,7 @@ in
         '';
 
         autostart_sh = ''
-          sleep 1 && ${inputs.dms.packages.${pkgs.system}.default}
+          exec-once=dms run -d
         '';
       };
       # Add mango Home Manager module here
