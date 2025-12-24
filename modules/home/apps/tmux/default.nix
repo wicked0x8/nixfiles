@@ -34,7 +34,6 @@ in
           tmuxPlugins.better-mouse-mode
           tmuxPlugins.lazy-restore
           tmuxPlugins.tmux-which-key
-          tmuxPlugins.tmux-dotbar
         ];
 
         extraConfig = ''
