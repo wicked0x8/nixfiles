@@ -20,7 +20,7 @@ in
         prezto = {
           enable = true;
           editor.keymap = "emacs";
-          prompt.theme = "fire";
+          prompt.theme = "giddy"; #pure
         };
 
         initContent = ''
