@@ -285,9 +285,6 @@ in
           layerrule=animation_type_close:zoom,layer_name:rofi
         '';
 
-        autostart_sh = ''
-          systemctl --user start mango-session.target
-        '';
       };
       # Add mango Home Manager module here
       imports = [
