@@ -85,6 +85,7 @@
             installRustc = false;
           };
           pyright.enable = true;
+          nil_ls.enable = true;
         };
       };
 

@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nix-colors.url = "github:misterio77/nix-colors";
     flake-parts.url = "github:hercules-ci/flake-parts";
     matugen.url = "github:InioX/Matugen";
 
@@ -27,19 +26,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    dgop = {
-      url = "github:AvengeMedia/dgop";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    dankMaterialShell = {
+    dms = {
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.dgop.follows = "dgop";
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, mango, niri, flake-parts, dankMaterialShell, dgop, matugen, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, mango, niri, flake-parts, dms, matugen, ... }:
   let
     lib = nixpkgs.lib.extend (self: super: {
       whatever = import ./lib {
