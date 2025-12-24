@@ -29,9 +29,11 @@ in
         plugins = with pkgs; [
           tmuxPlugins.sessionist
           tmuxPlugins.extrakto
-          tmuxPlugins.pain-control
           tmuxPlugins.sensible
-          #tmuxPlugins.dotbar
+          tmuxPlugins.vim-tmux-navigator
+          tmuxPlugins.better-mouse-mode
+          tmuxPlugins.lazy-restore
+          tmuxPlugins.tmux2k
         ];
 
         extraConfig = ''
