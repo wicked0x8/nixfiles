@@ -1,7 +1,6 @@
 { lib, config, pkgs, ... }:
 let
   inherit (lib) mkEnableOption mkIf;
-  inherit (config.mine) user;
   cfg = config.mine.system.amdcpu-tweaks;
 in
 {
