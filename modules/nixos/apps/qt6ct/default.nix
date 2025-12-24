@@ -14,6 +14,6 @@ in
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ qt6ct ];
+    environment.systemPackages = with pkgs; [ qt6Packages.qt6ct ];
   };
 }
