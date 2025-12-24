@@ -1,6 +1,5 @@
 {
   lib,
-  pkgs,
   config,
   inputs,
   ...
@@ -287,7 +286,7 @@ in
         '';
 
         autostart_sh = ''
-          exec-once=dms run -d
+          systemctl --user start mango-session.target
         '';
       };
       # Add mango Home Manager module here
