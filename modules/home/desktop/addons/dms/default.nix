@@ -1,5 +1,9 @@
-
-{ inputs, config, pkgs, lib, user, ... }:
+{
+  inputs,
+  config,
+  lib,
+  ...
+}:
 let
   inherit (lib) mkIf;
   inherit (lib.whatever) mkOpt;
@@ -10,12 +14,11 @@ in
   options.mine.desktop.dms = {
     enable = mkOpt lib.types.bool false "enable dankmaterialshell";
   };
-  
+
   config = mkIf cfg.enable {
     home-manager.users.${user.name} = {
-        imports = [ inputs.dms.homeModules.dankMaterialShell.default ];
-        programs.dankMaterialShell.enable = true;
+      imports = [ inputs.dms.homeModules.dank-material-shell ];
+      programs.dank-material-shell.enable = true;
     };
   };
 }
-
