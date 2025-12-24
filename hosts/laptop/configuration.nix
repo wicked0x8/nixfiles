@@ -43,7 +43,7 @@ in
       apps = {
         tmux = enabled;
         qt6ct = enabled;
-        gtk = enabled;
+        gtk3 = enabled;
         alacritty = enabled;
         firefox = enabled;
         prismlauncher = enabled;
