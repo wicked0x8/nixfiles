@@ -31,7 +31,7 @@ in
           tmuxPlugins.extrakto
           tmuxPlugins.pain-control
           tmuxPlugins.sensible
-          tmuxPlugins.dotbar
+          #tmuxPlugins.dotbar
         ];
 
         extraConfig = ''
