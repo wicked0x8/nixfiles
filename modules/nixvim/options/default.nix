@@ -1,10 +1,4 @@
-{ lib, config, ... }:
-let
-
-  inherit (config.mine) user;
-  inherit (lib) mkIf;
-
-in
+{ ... }:
 {
   programs.nixvim = {
     opts = {

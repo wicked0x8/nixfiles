@@ -1,4 +1,9 @@
-{ lib, config, pkgs, inputs, ... }:
+{
+  lib,
+  config,
+  inputs,
+  ...
+}:
 let
   inherit (lib) mkEnableOption mkIf;
   inherit (config.mine) user;
@@ -20,8 +25,8 @@ in
         settings = ''
           # More option see [https://github.com/DreamMaoMao/mango/wiki/](https://github.com/DreamMaoMao/mango/wiki/)
 
-	  monitorrule=eDP-1,0.55,1,tile,0,1,0,0,1920,1080,60
-	  monitorrule=HDMI-A-1,0.55,1,tile,0,1,1925,0,1920,1080,75
+          monitorrule=eDP-1,0.55,1,tile,0,1,0,0,1920,1080,60
+          monitorrule=HDMI-A-1,0.55,1,tile,0,1,1925,0,1920,1080,75
 
           # Window effect
           blur=0
@@ -113,7 +118,7 @@ in
           repeat_delay=600
           numlockon=0
           xkb_rules_layout=us,ru
-	  xkb_rules_options=grp:lalt_lshift_toggle
+          xkb_rules_options=grp:lalt_lshift_toggle
 
           # Trackpad
           # need relogin to make it apply
@@ -169,7 +174,7 @@ in
 
           # menu and terminal
           bind=Alt,T,spawn,alacritty
-	  bind=Alt,B,spawn,firefox
+          bind=Alt,B,spawn,firefox
 
           # exit
           bind=SUPER,m,quit
@@ -182,7 +187,7 @@ in
           bind=ALT,Up,focusdir,up
           bind=ALT,Down,focusdir,down
 
-	  bind=SUPER,S,spawn,shotman --capture region
+          bind=SUPER,S,spawn,shotman --capture region
 
           # swap window
           bind=SUPER+SHIFT,Up,exchange_client,up
@@ -282,7 +287,7 @@ in
 
         autostart_sh = ''
           # Put autostart commands here (without shebang)
-          dms run -d
+          sleep 2 && dms run -d
         '';
       };
       # Add mango Home Manager module here
@@ -292,4 +297,3 @@ in
     };
   };
 }
-

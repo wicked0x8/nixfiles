@@ -1,7 +1,10 @@
-{ config, pkgs, lib, inputs, ... }:
+{
+  pkgs,
+  lib,
+  ...
+}:
 let
   inherit (lib.whatever) enabled;
-  inherit (config.mine) user;
 in
 {
   imports = [
@@ -21,7 +24,8 @@ in
     };
 
     environment.variables = {
-      QT_QPA_PLATFORMTHEME = "qt5ct";
+      QT_QPA_PLATFORMTHEME = "gtk3";
+      QT_QPA_PLATFORMTHEME_QT6 = "gtk3";
     };
 
     mine = {
