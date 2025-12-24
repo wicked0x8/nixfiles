@@ -1,4 +1,9 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 let
   inherit (lib) mkEnableOption mkIf;
   cfg = config.mine.system.fonts;
@@ -13,6 +18,7 @@ in
       packages = with pkgs; [
         nerd-fonts.jetbrains-mono
         nerd-fonts.fira-code
+        nerd-fonts.mononoki
       ];
 
       fontconfig = {
