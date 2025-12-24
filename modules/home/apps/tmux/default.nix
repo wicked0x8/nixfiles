@@ -1,4 +1,9 @@
-{ pkgs, lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 let
 
   inherit (lib) mkEnableOption mkIf;
@@ -30,8 +35,9 @@ in
         ];
 
         extraConfig = ''
-          set -g default-terminal "$TERM:"
-          set -ag terminal-overrides ",$TERM:Tc"
+          set -g default-terminal "screen-256color"
+          set -ag terminal-overrides ",alacritty:RGB"
+          set -ag terminal-overrides ",screen-256color:RGB"
         '';
       };
     };

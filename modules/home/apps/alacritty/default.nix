@@ -24,9 +24,6 @@ in
               blinking = "Always";
             };
           };
-          env = {
-            term = "xterm-256color";
-          };
         };
       };
     };
