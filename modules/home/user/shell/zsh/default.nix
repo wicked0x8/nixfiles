@@ -19,7 +19,7 @@ in
         enable = true;
         prezto = {
           enable = true;
-          editor.keymap = "vi";
+          editor.keymap = "emacs";
           prompt.theme = "pure";
         };
 
