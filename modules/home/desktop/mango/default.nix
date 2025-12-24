@@ -286,7 +286,6 @@ in
         '';
 
         autostart_sh = ''
-          # Put autostart commands here (without shebang)
           sleep 2 && dms run -d
         '';
       };
