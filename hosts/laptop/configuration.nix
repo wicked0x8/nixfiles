@@ -47,11 +47,9 @@ in
         prismlauncher = enabled;
         obsidian = enabled;
         telegram = enabled;
-        anki = enabled;
         lutris = enabled;
         qbittorrent = enabled;
         zathura = enabled;
-        vscodium = enabled;
         steam = enabled;
         rustdesk = enabled;
       };
@@ -61,7 +59,6 @@ in
           enable = true;
           home = true;
         };
-        #ly = enabled;
         lemurs = enabled;
         dms = enabled;
       };
