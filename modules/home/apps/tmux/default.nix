@@ -33,7 +33,8 @@ in
           tmuxPlugins.vim-tmux-navigator
           tmuxPlugins.better-mouse-mode
           tmuxPlugins.lazy-restore
-          tmuxPlugins.tmux2k
+          tmuxPlugins.tmux-which-key
+          tmuxPlugins.tmux-dotbar
         ];
 
         extraConfig = ''
