@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    matugen.url = "github:InioX/Matugen";
 
     niri = {
       url = "github:sodiboo/niri-flake";
