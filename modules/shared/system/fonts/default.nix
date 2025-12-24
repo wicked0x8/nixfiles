@@ -24,7 +24,7 @@ in
       fontconfig = {
         enable = true;
         defaultFonts = {
-          monospace = [ "JetBrains Mono Nerd Font" ];
+          monospace = [ "Mononoki Nerd Font Mono" ];
         };
       };
     };
