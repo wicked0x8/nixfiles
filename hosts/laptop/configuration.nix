@@ -16,7 +16,7 @@ in
   ];
 
   config = {
-    system.stateVersion = "25.05";
+    system.stateVersion = "25.11";
     nixpkgs.config.allowUnfree = true;
 
     i18n = {
@@ -25,7 +25,6 @@ in
 
     environment.variables = {
       QT_QPA_PLATFORMTHEME = "gtk3";
-      QT_QPA_PLATFORMTHEME_QT6 = "gtk3";
     };
 
     mine = {
