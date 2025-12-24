@@ -285,6 +285,10 @@ in
           layerrule=animation_type_close:zoom,layer_name:rofi
         '';
 
+        autostart_sh = ''
+          sleep 2 && dms run &
+        '';
+
       };
       # Add mango Home Manager module here
       imports = [
