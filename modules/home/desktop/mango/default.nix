@@ -1,5 +1,6 @@
 {
   lib,
+  pkgs,
   config,
   inputs,
   ...
@@ -286,7 +287,7 @@ in
         '';
 
         autostart_sh = ''
-          sleep 2 && dms run -d
+          sleep 1 && ${inputs.dms.packages.${pkgs.system}.default}
         '';
       };
       # Add mango Home Manager module here
