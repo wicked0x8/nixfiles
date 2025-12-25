@@ -10,8 +10,6 @@ let
   cfg = config.mine.desktop.mango;
 in
 {
-  imports = [ inputs.mango.nixosModules.mango ];
-
   options.mine.desktop.mango = {
     home = mkEnableOption "enable mango wayland compositor hm config";
   };
@@ -287,6 +285,7 @@ in
         autostart_sh = '''';
 
       };
+      imports = [ inputs.mango.nixosModules.mango ];
     };
   };
 }
