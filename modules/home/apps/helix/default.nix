@@ -32,7 +32,13 @@ in
 
             statusline = {
               center = [ "version-control" ];
-              left = [ "mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator" ];
+              left = [
+                "mode"
+                "spinner"
+                "file-name"
+                "read-only-indicator"
+                "file-modification-indicator"
+              ];
             };
 
             indent-guides = {
@@ -50,7 +56,9 @@ in
               display-inlay-hints = true;
             };
 
-            file.picker = { hidden = false; };
+            file.picker = {
+              hidden = false;
+            };
           };
         };
 
