@@ -74,7 +74,6 @@ in
             auto-format = true;
             language-servers = [ "rust-analyzer" ];
             file-types = [ "rs" ];
-            comment-token = "//";
             indent = {
               tab-width = 4;
               unit = "    ";
