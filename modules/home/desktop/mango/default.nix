@@ -140,8 +140,8 @@ in
           # Appearance
           gappih=5
           gappiv=5
-          gappoh=10
-          gappov=10
+          gappoh=40
+          gappov=40
           scratchpad_width_ratio=0.8
           scratchpad_height_ratio=0.9
           borderpx=2
