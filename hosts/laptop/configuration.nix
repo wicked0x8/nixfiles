@@ -8,7 +8,6 @@ let
 in
 {
   imports = [
-    ./cachix.nix
     ./hardware-configuration.nix
     ../../modules/nixos/import.nix
     ../../modules/home/import.nix
