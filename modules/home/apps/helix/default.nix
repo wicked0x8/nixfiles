@@ -21,7 +21,7 @@ in
       programs.helix = {
         enable = true;
         settings = {
-          theme = "base16-terminal";
+          theme = "base16_terminal";
           editor.cursor-shape = {
             normal = "block";
             insert = "bar";
