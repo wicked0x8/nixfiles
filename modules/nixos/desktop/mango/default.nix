@@ -14,10 +14,9 @@ in
     enable = mkEnableOption "enable mango wayland compositor";
   };
 
-  config = mkIf cfg.enable {
-    # Add mango nixos module
-    imports = [ inputs.mango.nixosModules.mango ];
+  imports = [ inputs.mango.nixosModules.mango ];
 
+  config = mkIf cfg.enable {
     programs.mango.enable = true;
 
     # additional packages
