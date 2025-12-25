@@ -49,7 +49,7 @@ in
           shadows_position_y = 0
           shadowscolor= 0x000000ff
 
-          border_radius=12
+          border_radius=0
           no_radius_when_single=0
           focused_opacity=1.0
           unfocused_opacity=1.0
