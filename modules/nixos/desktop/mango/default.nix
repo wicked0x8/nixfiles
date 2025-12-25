@@ -1,4 +1,10 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 let
   inherit (lib) mkEnableOption mkIf;
   cfg = config.mine.desktop.mango;
@@ -9,6 +15,9 @@ in
   };
 
   config = mkIf cfg.enable {
+    # Add mango nixos module
+    imports = [ inputs.mango.nixosModules.mango ];
+
     programs.mango.enable = true;
 
     # additional packages
