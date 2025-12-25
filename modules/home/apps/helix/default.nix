@@ -22,10 +22,16 @@ in
         enable = true;
         settings = {
           theme = "base16_terminal";
-          editor.cursor-shape = {
-            normal = "block";
-            insert = "bar";
-            select = "underline";
+          editor = {
+            line-number = "relative";
+            mouse = false;
+
+            cursor-shape = {
+              insert = "bar";
+              normal = "block";
+              select = "underline";
+            };
+
           };
         };
         languages.language = [
