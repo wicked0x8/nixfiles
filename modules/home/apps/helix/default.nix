@@ -56,7 +56,7 @@ in
               display-inlay-hints = true;
             };
 
-            file.picker = {
+            file-picker = {
               hidden = false;
             };
           };
