@@ -8,10 +8,9 @@ let
   inherit (lib) mkEnableOption mkIf;
   inherit (config.mine) user;
   cfg = config.mine.desktop.mango;
-  mangoModule = inputs.mango.nixosModules.mango;
 in
 {
-  imports = [ mangoModule ];
+  imports = [ inputs.mango.nixosModules.mango ];
 
   options.mine.desktop.mango = {
     home = mkEnableOption "enable mango wayland compositor hm config";
@@ -288,10 +287,6 @@ in
         autostart_sh = '''';
 
       };
-      # Add mango Home Manager module here
-      imports = [
-        inputs.mango.hmModules.mango
-      ];
     };
   };
 }
