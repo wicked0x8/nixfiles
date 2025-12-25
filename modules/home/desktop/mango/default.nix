@@ -56,7 +56,7 @@ in
 
           # Animation Configuration(support type:zoom,slide)
           # tag_animation_direction: 0-horizontal,1-vertical
-          animations=1
+          animations=0
           layer_animations=1
           animation_type_open=slide
           animation_type_close=slide
@@ -140,8 +140,8 @@ in
           # Appearance
           gappih=5
           gappiv=5
-          gappoh=40
-          gappov=40
+          gappoh=10
+          gappov=10
           scratchpad_width_ratio=0.8
           scratchpad_height_ratio=0.9
           borderpx=2
