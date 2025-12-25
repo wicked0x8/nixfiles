@@ -16,6 +16,10 @@ in
 
   config = mkIf cfg.home {
     home-manager.users.${user.name} = {
+      imports = [
+        inputs.mango.hmModules.mango # Add mango hm module FIRST
+      ];
+
       wayland.windowManager.mango = {
         enable = true;
 
@@ -189,7 +193,7 @@ in
           # swap window
           bind=SUPER+SHIFT,Up,exchange_client,up
           bind=SUPER+SHIFT,Down,exchange_client,down
-          bind=SUPER+SHIFT,Left,exchange_client,eft
+          bind=SUPER+SHIFT,Left,exchange_client,left
           bind=SUPER+SHIFT,Right,exchange_client,right
 
           # switch window status
@@ -282,10 +286,11 @@ in
           layerrule=animation_type_close:zoom,layer_name:rofi
         '';
 
-        autostart_sh = '''';
-
+        autostart_sh = ''
+          # Add your autostart commands here
+          # Note: no shebang needed
+        '';
       };
-      imports = [ inputs.mango.nixosModules.mango ];
     };
   };
 }
