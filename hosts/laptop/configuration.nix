@@ -24,6 +24,7 @@ in
 
     environment.variables = {
       QT_QPA_PLATFORMTHEME = "gtk3";
+      NIXPKGS_ALLOW_UNFREE = 1;
     };
 
     mine = {
