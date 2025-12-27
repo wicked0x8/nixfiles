@@ -87,7 +87,6 @@ in
             enable = true;
             packages = pkgs.linuxPackages_zen;
           };
-          exfat = enabled;
         };
 
         documentation = {
