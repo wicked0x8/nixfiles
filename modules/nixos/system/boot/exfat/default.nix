@@ -18,7 +18,7 @@ in
 
     environment.systemPackages = with pkgs; [
       exfat
-      exfat-utils
+      exfatprogs
     ];
   };
 }
