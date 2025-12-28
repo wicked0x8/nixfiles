@@ -40,7 +40,6 @@ in
 
       apps = {
         tmux = enabled;
-        helix = enabled;
         qt6ct = enabled;
         gtk3 = enabled;
         alacritty = enabled;
