@@ -52,6 +52,7 @@ in
         zathura = enabled;
         steam = enabled;
         rustdesk = enabled;
+        libreoffice = enabled;
       };
 
       desktop = {
