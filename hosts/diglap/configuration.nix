@@ -97,7 +97,7 @@ in
         networking = {
           networkmanager = {
             enable = true;
-            hostname = "laptop";
+            hostname = "diglap";
           };
         };
 
