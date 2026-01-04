@@ -65,7 +65,7 @@
               inherit lib;
             };
             modules = [
-              ./hosts/diglop/configuration.nix
+              ./hosts/diglap/configuration.nix
             ];
           };
         };
