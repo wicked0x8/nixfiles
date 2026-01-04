@@ -32,15 +32,28 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, mango, niri, flake-parts, dms, matugen, ... }:
-  let
-    lib = nixpkgs.lib.extend (self: super: {
-      whatever = import ./lib {
-        inherit inputs;
-        lib = self;
-      };
-    });
-  in
+  outputs =
+    inputs@{
+      self,
+      nixpkgs,
+      home-manager,
+      mango,
+      niri,
+      flake-parts,
+      dms,
+      matugen,
+      ...
+    }:
+    let
+      lib = nixpkgs.lib.extend (
+        self: super: {
+          whatever = import ./lib {
+            inherit inputs;
+            lib = self;
+          };
+        }
+      );
+    in
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [ "x86_64-linux" ];
       flake = {
@@ -52,11 +65,10 @@
               inherit lib;
             };
             modules = [
-              ./hosts/laptop/configuration.nix
+              ./hosts/diglop/configuration.nix
             ];
           };
         };
       };
     };
 }
-
