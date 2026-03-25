@@ -1,29 +1,41 @@
 {
   pkgs,
+  config,
   lib,
   ...
 }:
 let
   inherit (lib.whatever) enabled;
+  inherit (config.mine) user;
 in
 {
   imports = [
-    ./hardware-configuration.nix
-    ../../modules/nixos/import.nix
+    ../../modules/darwin/import.nix
     ../../modules/home/import.nix
     ../../modules/shared/import.nix
   ];
 
   config = {
-    system.stateVersion = "26.05";
-    nixpkgs.config.allowUnfree = true;
+    nixpkgs = {
+      hostPlatform = "aarch64-darwin";
+      config.allowUnfree = true;
+    };
 
-    i18n = {
-      extraLocales = [ "ru_RU.UTF-8/UTF-8" ];
+    nix = {
+      settings = {
+        experimental-features = "nix-command flakes";
+      };
+      optimise.automatic = true;
+      package = pkgs.nix;
+    };
+
+    system = {
+      stateVersion = 5;
+      primaryUser = "${user.name}";
     };
 
     environment.variables = {
-      QT_QPA_PLATFORMTHEME = "qt6ct";
+      PATH = "/usr/bin/:$PATH";
     };
 
     mine = {
@@ -34,77 +46,46 @@ in
       };
 
       home-manager = {
-        git = enabled;
         zsh = enabled;
+        git = enabled;
       };
+
+      desktop.yabai = enabled;
 
       apps = {
-        tmux = enabled;
-        qt6ct = enabled;
-        gtk3 = enabled;
-        alacritty = enabled;
-        firefox = enabled;
-        prismlauncher = enabled;
-        obsidian = enabled;
-        telegram = enabled;
-        lutris = enabled;
-        qbittorrent = enabled;
-        zathura = enabled;
-        steam = enabled;
-        rustdesk = enabled;
-        libreoffice = enabled;
-      };
-
-      desktop = {
-        mango = {
+        ghostty = {
           enable = true;
           home = true;
         };
-        lemurs = enabled;
-        dms = enabled;
+        mumble = {
+          enable = true;
+          server = false;
+          serverPassword = "qwerty1234";
+          superUserPassword = "betterthanqwerty1234";
+          serverBinaryPath = "/Users/${user.name}/.local/bin/murmurd";
+        };
+        keka = enabled;
+        libreoffice = enabled;
+        prism = enabled;
+        adguard-vpn = enabled;
+        bit-slicer = enabled;
       };
 
       tools = {
-        fastfetch = enabled;
+        homebrew = enabled;
+        ice = enabled;
         nixvim = enabled;
-        shotman = enabled;
-        wine = enabled;
-        make = enabled;
+        fastfetch = enabled;
+        mole = enabled;
+        arduino = enabled;
         zoxide = enabled;
-        appimage-run = enabled;
-      };
-
-      services = {
-        seatd = enabled;
-        cliphist = enabled;
-        zapret = enabled;
       };
 
       system = {
-        boot = {
-          grub = enabled;
-          kernel = {
-            enable = true;
-            packages = pkgs.linuxPackages_zen;
-          };
-          exfat = enabled;
+        utils = {
+          enable = true;
+          dev = true;
         };
-
-        documentation = {
-          enable = false;
-        };
-
-        networking = {
-          networkmanager = {
-            enable = true;
-            hostname = "laptop";
-          };
-        };
-
-        bluetooth = enabled;
-        amdcpu-tweaks = enabled;
-        fonts = enabled;
-        nix.flakes = enabled;
       };
     };
   };

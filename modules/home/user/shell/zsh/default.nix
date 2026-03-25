@@ -20,10 +20,12 @@ in
         prezto = {
           enable = true;
           editor.keymap = "emacs";
-          prompt.theme = "pure"; 
+          prompt.theme = "kylewest";
         };
 
-        initContent = ''
+        initContent= ''
+          eval "$(zoxide init zsh)"
+          source <(fzf --zsh)
           autoload -U up-line-or-beginning-search
           autoload -U down-line-or-beginning-search
           zle -N up-line-or-beginning-search

@@ -16,17 +16,9 @@ in
   config = mkIf cfg.enable {
     fonts = {
       packages = with pkgs; [
-        nerd-fonts.jetbrains-mono
-        nerd-fonts.fira-code
-        nerd-fonts.mononoki
+        jetbrains-mono
+        noto-fonts-color-emoji
       ];
-
-      fontconfig = {
-        enable = true;
-        defaultFonts = {
-          monospace = [ "Mononoki Nerd Font Mono" ];
-        };
-      };
     };
   };
 }

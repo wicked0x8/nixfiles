@@ -1,19 +1,28 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 
 with lib;
 let
-  inherit (lib.whatever) mkOpt;
+  inherit (lib.whatever) mkOpt; # Verify this lib exists
   cfg = config.mine.system.utils;
-  dev = with pkgs; [
-    glow
-    jq
-    nixfmt-rfc-style
-    nixpkgs-fmt
-    shellcheck
-    statix
-  ];
-in
 
+  # Use rustup (includes cargo) - don't add cargo separately
+  dev =
+    with pkgs;
+    lib.optionals cfg.dev [
+      glow
+      jq
+      nixfmt
+      nixpkgs-fmt
+      shellcheck
+      statix
+      rustup # This includes cargo automatically
+    ];
+in
 {
   options.mine.system.utils = {
     enable = mkOpt types.bool true "system utils";
@@ -24,6 +33,7 @@ in
     environment.systemPackages =
       with pkgs;
       [
+        # Base utils
         curl
         eza
         file
@@ -32,6 +42,8 @@ in
         tree
         unzip
         wget
-      ];
+        # Developer tools (conditionally)
+      ]
+      ++ dev;
   };
 }

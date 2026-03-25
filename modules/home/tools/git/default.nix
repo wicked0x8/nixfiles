@@ -15,7 +15,7 @@ in
   };
 
   config = mkIf cfg.enable {
-    mine.tools.git.enable = true;
+    #mine.tools.git.enable = true;
 
     home-manager.users.${user.name} = {
       home.packages = with pkgs; [
