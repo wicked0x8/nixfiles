@@ -6,6 +6,7 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     matugen.url = "github:InioX/Matugen";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    nixcord.url = "github:4evy/nixcord";
 
     niri = {
       url = "github:sodiboo/niri-flake";
@@ -43,24 +44,22 @@
     };
   };
 
-  outputs =
-    inputs@{
-      nixpkgs,
-      flake-parts,
-      nix-darwin,
-      ...
-    }:
-    let
-      lib = nixpkgs.lib.extend (
-        self: super: {
-          whatever = import ./lib {
-            inherit inputs;
-            lib = self;
-          };
-        }
-      );
-    in
-    flake-parts.lib.mkFlake { inherit inputs; } {
+  outputs = inputs @ {
+    nixpkgs,
+    flake-parts,
+    nix-darwin,
+    ...
+  }: let
+    lib = nixpkgs.lib.extend (
+      self: super: {
+        whatever = import ./lib {
+          inherit inputs;
+          lib = self;
+        };
+      }
+    );
+  in
+    flake-parts.lib.mkFlake {inherit inputs;} {
       systems = [
         "x86_64-linux"
         "aarch64-darwin"
