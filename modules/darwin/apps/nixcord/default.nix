@@ -9,7 +9,7 @@
 in {
   imports = [inputs.nixcord.darwinModules.nixcord];
 
-  options.mine.apps.kew = {
+  options.mine.apps.nixcord = {
     enable = mkEnableOption "nixcord";
   };
 
