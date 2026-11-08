@@ -55,8 +55,8 @@ in {
         };
         libreoffice = enabled;
         steam = enabled;
-        #vesktop = enabled;
-        nixcord = enabled;
+        vesktop = enabled;
+        #nixcord = enabled;
         krita = enabled;
         keka = enabled;
         prism = enabled;

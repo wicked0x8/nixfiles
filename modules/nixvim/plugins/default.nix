@@ -10,6 +10,8 @@
         ruff
       ];
 
+      nixpkgs.config.allowUnfree = true;
+
       # ── Core options ────────────────────────────────────────────────────────
       opts = {
         clipboard = "unnamedplus";
@@ -98,30 +100,6 @@
         oil.enable = true;
         web-devicons.enable = true;
 
-        # ── Smooth scrolling ─────────────────────────────────────────────────
-        cinnamon = {
-          enable = true;
-
-          settings = {
-            extra_keymaps = true;
-            extended_keymaps = false;
-            default_keymaps = true;
-            max_length = 500;
-            scroll_limit = 150;
-
-            options = {
-              mode = "cursor";
-              time = 280;
-              easing = "cubic";
-
-              max_delta = {
-                line = 150;
-                column = 200;
-              };
-            };
-          };
-        };
-
         snacks = {
           enable = true;
 
@@ -131,21 +109,6 @@
             statuscolumn.enabled = true;
             words.enabled = true;
             lazygit.enabled = true;
-          };
-        };
-
-        # ── Delete without overwriting clipboard ──────────────────────────────
-        cutlass = {
-          enable = true;
-
-          settings = {
-            cut_key = "m";
-            override = true;
-
-            exclude = [
-              "ns"
-              "nS"
-            ];
           };
         };
 
@@ -349,39 +312,6 @@
                 };
 
                 procMacro.enable = true;
-              };
-            };
-
-            # Emmet completions in Rust/Yew html! { ... } blocks.
-            #
-            # Examples:
-            #   div.container
-            #   ul>li.item*3
-            #   button.btn{Click me}
-            #
-            # Trigger completion via <C-Space>.
-            emmet_ls = {
-              enable = true;
-
-              filetypes = [
-                "html"
-                "css"
-                "scss"
-                "sass"
-                "less"
-                "javascriptreact"
-                "typescriptreact"
-                "vue"
-                "svelte"
-                "rust"
-              ];
-
-              initOptions = {
-                includeLanguages = {
-                  eelixir = "html-eex";
-                  eruby = "erb";
-                  rust = "html";
-                };
               };
             };
 
