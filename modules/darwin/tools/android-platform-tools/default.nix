@@ -11,6 +11,6 @@ in {
   };
 
   config = mkIf cfg.enable {
-    homebrew.brews = ["android-platform-tools"];
+    homebrew.casks = ["android-platform-tools"];
   };
 }
