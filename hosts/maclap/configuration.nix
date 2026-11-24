@@ -57,6 +57,7 @@ in {
         steam = enabled;
         vesktop = enabled;
         #nixcord = enabled;
+        highball = enabled;
         krita = enabled;
         keka = enabled;
         prism = enabled;
@@ -66,10 +67,11 @@ in {
 
       tools = {
         homebrew = enabled;
-        arduino = enabled;
+        #arduino = enabled;
         nixvim = enabled;
         fastfetch = enabled;
         mole = enabled;
+        android-platform-tools = enabled;
         debloat = enabled;
       };
 
