@@ -11,6 +11,7 @@ in {
   };
 
   config = mkIf cfg.enable {
-    homebrew.casks = ["android-platform-tools libusb python-tk"];
+    homebrew.casks = ["android-platform-tools"];
+    homebrew.brews = ["libusb" "python-tk"];
   };
 }
